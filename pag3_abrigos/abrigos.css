@@ -1,5 +1,26 @@
-.divAbrigo1{
+.sobreAbrigos{
+    display: flex;
+    align-items:center;
+}
+.infoAbrigos{  
+    margin: 30px;
+    padding: 20px;
     display:inline-block;
-    width: 230px;
-    background-color: red;
+    width: 350px;
+    background-color: #f27127;
+}
+.fotoSobreAbrigos{
+    width: 100%;
+}
+.cardsAbrigos{
+    display:flex ;
+}
+.card{
+    background-color: #f27127;
+    width: 210px;
+    height: 300px;
+    padding: 10px;
+    margin-left: 30px;
+    margin: 40px;
+    border-radius: 10%;
 }
