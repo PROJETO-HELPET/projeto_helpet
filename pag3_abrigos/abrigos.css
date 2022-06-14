@@ -10,17 +10,39 @@
     background-color: #f27127;
 }
 .fotoSobreAbrigos{
+    padding-left: 0px;
     width: 100%;
 }
 .cardsAbrigos{
-    display:flex ;
+    display:flex;
+    text-align: center;
 }
 .card{
     background-color: #f27127;
     width: 210px;
-    height: 300px;
+    height: 400px;
     padding: 10px;
     margin-left: 30px;
     margin: 40px;
     border-radius: 10%;
+    
+}
+.logoAbrigo{
+    text-align: center;      
+}
+.imgLogo{
+    width: 90px;
+}
+.infoParceiro{
+    padding: 15px;
+}
+.pagParceiro{
+    display: flex;
+    text-align: center;
+    background: #401414;
+    width: 100px;
+}
+.linkPag{   
+    text-decoration: none;
+    color: #f27127; 
 }
