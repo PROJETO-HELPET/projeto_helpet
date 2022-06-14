@@ -27,6 +27,7 @@ header {
 header nav ul {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     list-style: none;
 
@@ -70,3 +71,80 @@ header div img.helpet {
     margin-left: 5px;
     filter: drop-shadow(5px 5px 4px #85848470);
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-content: space-around;
+}
+section div {
+    margin: 35px 5px 25px 10px;
+    padding: 20px;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #f27c22;
+    
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow:-1px -3px 10px #d3d3d3 ;
+    padding: 30px;
+
+    font-family: 'Handlee', cursive;
+}
+
+footer img {
+    filter: drop-shadow(5px 5px 4px #85848470);
+
+}
+
+footer div.links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+footer div.links div.links_1 ul{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+footer div.links ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.9ms;
+
+}
+
+footer div.links ul a:hover{
+    color: #401414;
+}
+
+footer div.links ul li.titulo{
+    font-size: 19px;
+    font-weight: 600;
+    color: #401414;
+}
+
+ 
+footer div.redes img{
+   height: 7vh;
+   
+}
+
+footer div.img_logo img{
+    max-height: 15vh;
+
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
