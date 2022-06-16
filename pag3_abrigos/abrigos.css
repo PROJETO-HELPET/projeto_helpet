@@ -15,13 +15,15 @@
 }
 .cardsAbrigos{
     display:flex;
-    text-align: center;
+    
 }
 .card{
     background-color: #f27127;
     width: 210px;
     height: 400px;
-    padding: 10px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin-left: 30px;
     margin: 40px;
     border-radius: 10%;
@@ -34,7 +36,11 @@
     width: 90px;
 }
 .infoParceiro{
+    display: flex;
+    align-items: center;
+    text-align: center;
     padding: 15px;
+    flex-direction: column;
 }
 .pagParceiro{
     display: flex;
@@ -42,7 +48,10 @@
     background: #401414;
     width: 100px;
 }
-.linkPag{   
-    text-decoration: none;
+
+.linkPag{
+    display: flex;
+    text-align: center;
     color: #f27127; 
+    text-decoration: none;
 }
