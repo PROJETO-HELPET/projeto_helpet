@@ -34,10 +34,6 @@ header nav ul {
     margin-right: 30px;     
 }
 
-#btn-mobile {
-    display: none;
-}
-
 header nav a {
     text-decoration: none;
     color: #fff;
@@ -89,7 +85,7 @@ section div {
 }
 
 footer {
-    margin-top: 30px;
+   
     background-color: #f27c22;
     
     
@@ -168,13 +164,6 @@ footer div.img_logo img.pet{
 }
 
 @media (max-width:600px) {
-    #btn-mobile {
-        display: block;
-    }
-
-    #menu {
-        display: none;
-    }
 
     header div figure#logotipo img {
         max-height: 8vh;
