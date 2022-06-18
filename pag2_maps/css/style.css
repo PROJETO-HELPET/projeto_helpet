@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+
+main{
+    font-family: 'Mali', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+main section:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#mapa{
+    display: flex;
+    flex-direction: row;
+    align-content: right;
+    border-radius: 10px;
+}
+
+h1  {
+    display: flex;
+    font-family: 'mali', cursive;
+    align-items: center;
+  
+ 
+}
+
+
+#abrigos-box{
+
+    background-color: #f27c22;
+
+    height: 500px;
+    width: 450px;
+    border: 1px box-shadow #000000;
+    padding: 5px;
+   
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+    
+}
+
+.custom-select{
+    position: relative;
+    font-family: 'Mali';
+    font-style: normal;
+    font-size: 24px;
+
+}
+
+.custom-select select{
+    display: none;
+}
+
+.select-selected {
+    background-color: rgb(155, 92, 9);
+}
+
+.select-selected::after{
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0%;
+    border: 6px solid transparent;
+    border: #fff transparent transparent transparent;
+}
+
+.select-selected.select-selected-arrow-active::after{
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+.select-items div, .select-selected{
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: rgb(155, 92, 9);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected{
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
