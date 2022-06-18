@@ -32,7 +32,7 @@ h1  {
     height: 500px;
     width: 450px;
     border: 1px box-shadow #000000;
-    padding: 5px;
+    padding: 10px;
    
 }
 
@@ -43,8 +43,9 @@ ul li {
     
     
 }
+/* SELECT BOX CUSTOMIZADA VIA CSS E JAVASCRIPT, POR ENQUANTO NÃO PODEMOS IMPLEMENTAR /
 
-.custom-select{
+/* .custom-select{
     position: relative;
     font-family: 'Mali';
     font-style: normal;
@@ -101,4 +102,4 @@ ul li {
 .select-items div:hover, .same-as-selected{
     background-color: rgba(0, 0, 0, 0.1);
 
-}
+} */
