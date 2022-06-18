@@ -1,3 +1,55 @@
-h1{
-    background-color: red;
+body{
+    background-color: rgb(221, 123, 31);
+    margin: 30px;
+}
+.pagAbrigo{
+    display: flex;
+}
+.logoParceiro{
+    display: flex;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    width: 200px;
+    height: 200px;
+}
+.infoParceiro{
+    
+}
+/* parte */
+.socialAbrigo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redeAbrigo{
+    text-align: center;
+    width: 250px;
+    height: 380px;
+    background-color: brown;
+    margin: 10px;
+}
+.logoSociais{
+    display: flex;
+    justify-content: center;    
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    padding-top: 20px;
+}
+.comoChegar{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+.redeAbrigo .comoChegar a {
+    display: flex;
+    background-color: #f27127;
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }

@@ -15,6 +15,7 @@
 }
 .cardsAbrigos{
     display:flex;
+    justify-content: center;
     
 }
 .card{
