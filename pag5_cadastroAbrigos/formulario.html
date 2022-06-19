@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="formulario.css">
+   
+       
+    </style>
+
+</head>
+
+
+<body> 
+    
+    <div id="tudo">
+        <div id="titulo">
+            <h1>
+                <strong> Fale Conosco:</strong> 
+            </h1>
+        </div>
+            <form action="cadastro" method="post">
+
+                <div class="conteudo">
+                <label for="nome"> Nome:</label>
+                <br>
+                <input type="text" id="nome" name="nome"  placeholder="Insira seu nome">
+                </div>
+                
+                <div class="conteudo">
+                <label for="sobrenome"> Sobrenome:</label>
+                <br>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Insira seu sobrenome">
+                </div>
+
+                <div class="conteudo">
+                <label for="email"> Email:</label>
+                <br>
+                <input type="email" id="email" name="email" placeholder="Insira seu email">
+                </div>  
+
+                <div class="conteudo">
+                <label for="telefone"> Telefone contato:</label>
+                <br>
+                <input type="tel" id="telefone" name="telefone" placeholder="Insira seu número">
+                </div>
+
+                <div class="conteudo">
+                <label for="solicitacao"> Tipo de solicitação :</label>
+                <select name="solicitacao" id="solicitacao">
+                    <option value="sugestao">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="contato">Contato</option>
+                </div>
+                
+                <div class="conteudo">
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10">Deixe sua mensagem</textarea>
+                </div>   
+                
+                <div>
+                 <button type="submit">Enviar</button>
+                </div>
+               
+
+            </form>
+    </div>
+</body>
+</html>
