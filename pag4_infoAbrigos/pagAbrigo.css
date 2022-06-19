@@ -1,6 +1,6 @@
 body{
-    background-color: rgb(221, 123, 31);
-    margin: 30px;
+    background-image: url(../pag3_abrigos/img/wallpaper__1920____1080_px_.png);
+    margin: 50px;
 }
 .pagAbrigo{
     display: flex;
@@ -14,7 +14,9 @@ body{
     height: 200px;
 }
 .infoParceiro{
-    
+    background-color: #f27127;
+    padding: 15px;
+    margin: 15px;
 }
 /* parte */
 .socialAbrigo{
@@ -26,8 +28,9 @@ body{
     text-align: center;
     width: 250px;
     height: 380px;
-    background-color: brown;
+    background-color: #f27127 ;
     margin: 10px;
+    padding: 10px;
 }
 .logoSociais{
     display: flex;
@@ -46,10 +49,11 @@ body{
 }
 .redeAbrigo .comoChegar a {
     display: flex;
-    background-color: #f27127;
+    background-color: #401414;
     width: 100px;
     height: 30px;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    color: #f27127;
 }

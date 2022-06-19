@@ -1,3 +1,7 @@
+body{
+    background-image: url(../pag3_abrigos/img/wallpaper__1920____1080_px_.png);
+    
+}
 .sobreAbrigos{
     display: flex;
     align-items:center;
@@ -8,10 +12,10 @@
     display:inline-block;
     width: 350px;
     background-color: #f27127;
+    border-radius: 10%;
 }
 .fotoSobreAbrigos{
-    padding-left: 0px;
-    width: 100%;
+    border-radius: 10%;
 }
 .cardsAbrigos{
     display:flex;
