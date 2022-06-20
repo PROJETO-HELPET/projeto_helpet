@@ -5,6 +5,11 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); */ 
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+body {
+    background-image: url(../img/sem\ cor\ de\ fundo.png);
+    
+}
 main {
     display: flex;
     justify-content: center;
@@ -15,7 +20,7 @@ main {
 
     width: 100%;
 
-    background-color: #e7e7e765;
+    /* background-color: #e7e7e765; */
 
     padding-top: 1rem;
     padding-bottom: 1rem;
