@@ -1,0 +1,63 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); fonte Handlee */
+/* @import url('https://fonts.googleapis.com/css2?family=Mali&display=swap'); fonte mali */
+
+
+
+body{
+    background-image: url(../pag3_abrigos/img/wallpaper__1920____1080_px_.png);
+    font-family: 'Handlee', cursive;
+    /* font-family: 'Mali', cursive; */
+}
+.pagAbrigo{
+    display: flex;
+}
+.logoParceiro{
+    display: flex;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    width: 200px;
+    height: 200px;
+}
+.infoParceiro{
+    background-color: #f27127;
+    padding: 15px;
+    margin: 15px;
+}
+/* parte */
+.socialAbrigo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoAbrigo{
+    text-align: center;
+    width: 250px;
+    height: 380px;
+    background-color: #f27127 ;
+    margin: 10px;
+    padding: 10px;
+}
+.logoSociais{
+    display: flex;
+    justify-content: center;    
+}
+.redeAbrigo{
+    width: 40px;
+    padding: 4px;
+}
+.comoChegar{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+.infoAbrigo .comoChegar a {
+    display: flex;
+    background-color: #401414;
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #f27127;
+}
