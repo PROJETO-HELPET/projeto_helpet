@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+
+main{
+    font-family: 'Mali', Impact, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 0 5px black;
+    color: aliceblue;
+  
+}
+main section:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+body{
+    background-image: url("img/sem\ cor\ de\ fundo.png");
+    background-color: rgb(255, 223, 182);
+    opacity: calc();
+    
+    
+}
+
+h1, h2 {
+    color: aliceblue;
+    text-shadow: 0 0 10px black;
+   
+}
+
+
+.encontre {
+    display: flex;
+    font-family: 'mali', cursive;
+    font-size: 32px;
+    margin: 25px;
+    border-radius: 10px;
+  
+  
+   
+ 
+}
+
+
+.regioes {
+    
+    font-family: 'mali', cursive;
+    align-items: left;
+    font-size: 24px;
+    margin: 5px;
+    margin-top: -25px;
+ 
+}
+
+
+
+#abrigos-box{
+
+    background-color: #f27c22;
+    border-radius: 20px;
+    margin: auto;
+   
+
+   
+   
+}
+
+#abrigos-box ul li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+   box-sizing: border-box;
+   box-shadow: 1px 1px 1px rgb(155, 92, 9) ;
+   color:aliceblue ;
+   justify-content: space-around;
+    
+}
+
+
+.custom-select {
+    font-size: 24px;
+    margin: auto;
+    font-weight: 600;
+}
+
+
+
+/* SELECT BOX CUSTOMIZADA VIA CSS E JAVASCRIPT, POR ENQUANTO NÃO PODEMOS IMPLEMENTAR /
+
+
+
+/* .custom-select{
+    position: relative;
+    font-family: 'Mali';
+    font-style: normal;
+    font-size: 24px;
+
+}
+
+.custom-select select{
+    display: none;
+}
+
+.select-selected {
+    background-color: rgb(155, 92, 9);
+}
+
+.select-selected::after{
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0%;
+    border: 6px solid transparent;
+    border: #fff transparent transparent transparent;
+}
+
+.select-selected.select-selected-arrow-active::after{
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+.select-items div, .select-selected{
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: rgb(155, 92, 9);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected{
+    background-color: rgba(0, 0, 0, 0.1);
+
+} */
