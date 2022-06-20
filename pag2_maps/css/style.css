@@ -16,6 +16,8 @@ main section:nth-child(1) {
 body{
     background-image: url("img/sem\ cor\ de\ fundo.png");
     background-color: rgb(255, 223, 182);
+    opacity: calc();
+    
     
 }
 
@@ -32,11 +34,12 @@ h1, h2 {
     font-size: 32px;
     margin: 25px;
     border-radius: 10px;
-   
+  
   
    
  
 }
+
 
 .regioes {
     
@@ -55,6 +58,7 @@ h1, h2 {
     background-color: #f27c22;
     border-radius: 20px;
     margin: auto;
+   
 
    
    
@@ -68,6 +72,7 @@ h1, h2 {
    box-sizing: border-box;
    box-shadow: 1px 1px 1px rgb(155, 92, 9) ;
    color:aliceblue ;
+   justify-content: space-around;
     
 }
 
