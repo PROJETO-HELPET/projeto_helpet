@@ -1,5 +1,12 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); fonte Handlee */
+/* @import url('https://fonts.googleapis.com/css2?family=Mali&display=swap'); fonte mali */
+
+
+
 body{
     background-image: url(../pag3_abrigos/img/wallpaper__1920____1080_px_.png);
+    font-family: 'Handlee', cursive;
+    /* font-family: 'Mali', cursive; */
     
 }
 .sobreAbrigos{
@@ -16,6 +23,7 @@ body{
 }
 .fotoSobreAbrigos{
     border-radius: 10%;
+    margin: 25px
 }
 .cardsAbrigos{
     display:flex;
@@ -24,9 +32,6 @@ body{
 }
 .card{
     background-color: #f27127;
-    width: 210px;
-    height: 400px;
-    padding: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
     margin-left: 30px;
@@ -52,6 +57,7 @@ body{
     text-align: center;
     background: #401414;
     width: 100px;
+    margin: 12px;
 }
 
 .linkPag{

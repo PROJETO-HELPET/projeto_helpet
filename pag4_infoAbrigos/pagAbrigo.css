@@ -1,6 +1,12 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); fonte Handlee */
+/* @import url('https://fonts.googleapis.com/css2?family=Mali&display=swap'); fonte mali */
+
+
+
 body{
     background-image: url(../pag3_abrigos/img/wallpaper__1920____1080_px_.png);
-    margin: 50px;
+    font-family: 'Handlee', cursive;
+    /* font-family: 'Mali', cursive; */
 }
 .pagAbrigo{
     display: flex;
@@ -24,7 +30,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.redeAbrigo{
+.infoAbrigo{
     text-align: center;
     width: 250px;
     height: 380px;
@@ -36,18 +42,16 @@ body{
     display: flex;
     justify-content: center;    
 }
-.logo{
+.redeAbrigo{
     width: 40px;
-    height: 40px;
-    padding: 10px;
-    padding-top: 20px;
+    padding: 4px;
 }
 .comoChegar{
     display: flex;
     justify-content: center;
     padding-top: 60px;
 }
-.redeAbrigo .comoChegar a {
+.infoAbrigo .comoChegar a {
     display: flex;
     background-color: #401414;
     width: 100px;
