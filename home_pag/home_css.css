@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+main {
+    background-color: #f27127;
+    font-family: sans-serif;
+    color: white;
+    width: 500px;
+    max-width: 100%;
+    /*height: 130px;*/
+    margin: 100px auto;
+    padding: 50px;
+    border: 10px dotted orange;
+    border-radius: 900px;
+    text-align: center;
+    
+}
+
+body {
+    background-image: url(./Wallpaper.png);
+}
+header{
+    background-color: #f27127;
+    max-width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.p1{
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.btn1{
+    background-color: #f27127;
+    color: white;
+    width: 200px;
+    height: 60px;
+    border: 3px dotted orange;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+}
+.btn1:hover{
+    background-color: orange;
+    color: black;
+    width: 200px;
+    height: 60px;
+    border: 3px dotted black;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn2{
+    background-color: #f27127;
+    color: white;
+    width: 200px;
+    height: 60px;
+    border: 3px dotted orange;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn2:hover{
+    background-color: orange;
+    color: black;
+    width: 200px;
+    height: 60px;
+    border: 3px dotted black;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+footer {
+    background-color: #f27c22;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow:-1px -3px 10px #d3d3d3 ;
+    padding: 0px;
+    font-family: 'Handlee', cursive;
+}
+footer img {
+    filter: drop-shadow(5px 5px 4px #85848470);
+}
+footer div.links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+footer div.links div.links_1 ul{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+footer div.links ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.9ms;
+}
+
+footer div.links ul a:hover{
+    color: #401414;
+}
+footer div.links ul li.titulo{
+    font-size: 19px;
+    font-weight: 600;
+    color: #401414;
+}
+footer div.redes img{
+   height: 7vh;
+   margin-top: 10px;
+}
+
+footer div.img_logo {
+   height: 150px;
+}
+
+footer div.img_logo img.cachorrinho{
+    max-height: 10vh;
+    position: relative;
+    top: 50px;
+}
+
+footer div.img_logo img.pet{
+    max-height: 8vh;
+    position: relative;
+    top: 50px;
+}
+
+@media (max-width:600px) {
+    header div figure#logotipo img {
+        max-height: 8vh;
+    }
+}
+
+    header div figure#helpet img.helpet {
+        max-height: 6vh;
+    }
+    /*footer {
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }*/
+
+.patinhas{
+    width: 100px;
+
+}
+
+    
