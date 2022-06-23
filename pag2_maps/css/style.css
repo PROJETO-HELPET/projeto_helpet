@@ -21,7 +21,7 @@ main section:nth-child(1) {
 
 body{
     background-image: url("img/sem\ cor\ de\ fundo.png");
-    background-color: rgb(255, 223, 182);
+    background-color: rgb(255, 255, 255);
     opacity: calc();
     
     
@@ -86,7 +86,7 @@ h1, h2 {
 .custom-select {
     font-size: 24px;
     margin: auto;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 
