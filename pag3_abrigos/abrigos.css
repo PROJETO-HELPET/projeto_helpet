@@ -53,16 +53,13 @@ body{
     flex-direction: column;
 }
 .pagParceiro{
-    display: flex;
-    text-align: center;
-    background: #401414;
-    width: 100px;
-    margin: 12px;
+    padding: 9px;
 }
 
 .linkPag{
-    display: flex;
     text-align: center;
+    background: #401414;
     color: #f27127; 
     text-decoration: none;
+    padding: 2px;
 }
