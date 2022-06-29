@@ -8,10 +8,10 @@ body{
     font-family: 'Handlee', cursive;
     /* font-family: 'Mali', cursive; */
 }
-.pagAbrigo{
+.pag-abrigo{
     display: flex;
 }
-.logoParceiro{
+.logo-parceiro{
     display: flex;
     margin: auto;
     margin-top: 60px;
@@ -20,20 +20,20 @@ body{
     height: 200px;
     border-radius: 20px;
 }
-.infoParceiro{
+.info-parceiro{
     background-color: #f27127;
     padding: 15px;
     margin: 15px;
     border-radius: 20px;
 }
 /* parte */
-.socialAbrigo{
+.social-abrigo{
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
-.infoAbrigo{
+.info-abrigo{
     text-align: center;
     width: 250px;
     height: 380px;
@@ -42,21 +42,21 @@ body{
     padding: 10px;
     border-radius: 20px;
 }
-.logoSociais{
+.logo-sociais{
     display: flex;
     justify-content: center;    
 }
-.redeAbrigo{
+.rede-abrigo{
     width: 40px;
     padding: 4px;
 }
-.comoChegar{
+.como-chegar{
     display: flex;
     justify-content: center;
     padding-top: 60px;
     
 }
-.infoAbrigo .comoChegar a {
+.info-abrigo .como-chegar a {
     display: flex;
     background-color: #401414;
     width: 100px;

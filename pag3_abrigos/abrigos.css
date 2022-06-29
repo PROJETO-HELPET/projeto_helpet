@@ -9,11 +9,11 @@ body{
     /* font-family: 'Mali', cursive; */
     
 }
-.sobreAbrigos{
+.sobre-abrigos{
     display: flex;
     align-items:center;
 }
-.infoAbrigos{  
+.info-abrigos{  
     margin: 30px;
     padding: 20px;
     display:inline-block;
@@ -21,11 +21,11 @@ body{
     background-color: #f27127;
     border-radius: 10%;
 }
-.fotoSobreAbrigos{
+.foto-sobre-abrigos{
     border-radius: 10%;
     margin: 25px
 }
-.cardsAbrigos{
+.cards-abrigos{
     display:flex;
     justify-content: center;
     
@@ -39,24 +39,24 @@ body{
     border-radius: 10%;
     
 }
-.logoAbrigo{
+.logo-abrigo{
     text-align: center;      
 }
-.imgLogo{
+.img-logo{
     width: 90px;
 }
-.infoParceiro{
+.info-parceiro{
     display: flex;
     align-items: center;
     text-align: center;
     padding: 15px;
     flex-direction: column;
 }
-.pagParceiro{
+.pag-parceiro{
     padding: 9px;
 }
 
-.linkPag{
+.link-pag{
     text-align: center;
     background: #401414;
     color: #f27127; 

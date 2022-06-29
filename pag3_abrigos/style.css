@@ -132,11 +132,11 @@ footer div.redes img{
    
 }
 
-footer div.img_logo {
+footer div.img-logo {
    height: 150px;
 }
 
-footer div.img_logo img.cachorrinho{
+footer div.img-logo img.cachorrinho{
     max-height: 10vh;
 
     position: relative;
@@ -144,7 +144,7 @@ footer div.img_logo img.cachorrinho{
 
 }
 
-footer div.img_logo img.pet{
+footer div.img-logo img.pet{
     max-height: 8vh;
 
     position: relative;
