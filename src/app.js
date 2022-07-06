@@ -17,7 +17,7 @@ app.use('/abrigosParceiros')
 app.use('/pagAbrigos') */
 app.use('/sobreNos', helpetRoutes)
 /* app.use('/login')
-app.use('/faleConosco') */
+app.use('/faleConosco' , helpetRouters) */
 
 
 app.listen(8002, () => {
