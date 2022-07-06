@@ -9,11 +9,16 @@ app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.use('/sobreNos', helpetRoutes)
+console.log((path.join(__dirname, '..', 'public', 'css', 'headerFooter.css')))
 
-/* app.get('/', (request, response) => {
-    response.send("hello World")
-}) */
+/* app.use('/')
+app.use('/abrigos')
+app.use('/abrigosParceiros')
+app.use('/pagAbrigos') */
+app.use('/sobreNos', helpetRoutes)
+/* app.use('/login')
+app.use('/faleConosco') */
+
 
 app.listen(8002, () => {
     console.log('Helpet rodando na porta 8002 🚀')

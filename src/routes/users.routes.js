@@ -3,6 +3,7 @@ const helpetController = require ('../controllers/usersController')
 
 const helpetRoutes = Router();
 
-helpetRoutes.get('/', helpetController.sobreNos);
+helpetRoutes.get("", helpetController.sobreNos);
+
 
 module.exports = helpetRoutes;
