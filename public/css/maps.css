@@ -20,7 +20,7 @@ main section:nth-child(1) {
 
 
 body{
-    background-image: url("img/sem\ cor\ de\ fundo.png");
+    background-image: url("../../public/img/background.png");
     background-color: rgb(255, 255, 255);
     opacity: calc();
     
