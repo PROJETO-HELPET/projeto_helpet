@@ -3,6 +3,7 @@ const helpetController = require ('../controllers/usersController')
 
 const helpetRoutes = Router();
 
+
 /* home */
 
 
@@ -11,10 +12,11 @@ const helpetRoutes = Router();
 
 /* abrigos */
 
-
+helpetRoutes.get("", helpetController.abrigosParceiros);
 
 /* pag abrigos */
 
+helpetRoutes.get("", helpetController.pagAbrigo);
 
 /* sobre nos */
 

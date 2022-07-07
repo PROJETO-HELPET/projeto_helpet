@@ -9,12 +9,12 @@ app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-console.log((path.join(__dirname, '..', 'public', 'css', 'headerFooter.css')))
+/* console.log((path.join(__dirname, '..', 'public', 'css', 'headerFooter.css'))) */
 
 /* app.use('/')
-app.use('/abrigos')
-app.use('/abrigosParceiros')
-app.use('/pagAbrigos') */
+app.use('/abrigos') */
+app.use('/abrigosParceiros', helpetRoutes)
+app.use('/pagAbrigo', helpetRoutes)
 app.use('/sobreNos', helpetRoutes)
 /* app.use('/login')
 app.use('/faleConosco' , helpetRouters) */

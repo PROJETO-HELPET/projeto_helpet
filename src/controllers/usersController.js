@@ -1,6 +1,6 @@
 const helpetRoutes = require('../routes/users.routes')
 
-
+const helpetController = {
 /* home */
 
 
@@ -10,17 +10,24 @@ const helpetRoutes = require('../routes/users.routes')
 /* abrigos */
 
 
+abrigosParceiros: (request, response) => {
+       response.render('abrigos')
+},
+
 /* pag abrigos */
 
+pagAbrigo: (request, response) => {
+    response.render('PagParceiro')
+},
 
 
 /* Sobre nós */
 
-const helpetController = {
-    sobreNos: (request, response) => {
-        response.render('sobreNos')
-    }
-}
+
+sobreNos: (request, response) => {
+    response.render('sobreNos') 
+},
+
 
 /* login  */
 
@@ -36,5 +43,7 @@ const helpetController = {
     }
 }
  */
+}
+
 
 module.exports = helpetController
