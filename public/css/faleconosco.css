@@ -176,9 +176,8 @@ footer div.img_logo img.pet{
 }
 
 
-
 body{
-    background-image: url(./img/patas.jpeg);
+    background-image: url(/img/background.png);
     width:max-content 1200px;
     padding:0px;
 

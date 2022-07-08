@@ -1,6 +1,9 @@
 const express = require('express');
 const path = require('path');
 const helpetRoutes = require('./routes/users.routes');
+const loginRoutes = require('./routes/login.routes');
+const faleConoscoRoutes = require('./routes/faleConosco.routes');
+const abrigosParceirosRoutes = require('./routes/abrigosParceiros.routes');
 
 const app = express();
 
@@ -9,15 +12,18 @@ app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-/* console.log((path.join(__dirname, '..', 'public', 'css', 'headerFooter.css'))) */
 
-/* app.use('/')
-app.use('/abrigos') */
+app.use('/', helpetRoutes);
+app.use('/login', loginRoutes);
+app.use('/faleConosco', faleConoscoRoutes);
+app.use('/abrigosParceiros', abrigosParceirosRoutes);
+
+/* app.use('/abrigos', helpetRoutes)
 app.use('/abrigosParceiros', helpetRoutes)
-app.use('/pagAbrigo', helpetRoutes)
+app.use('/pagParceiro', helpetRoutes)
 app.use('/sobreNos', helpetRoutes)
-/* app.use('/login')
-app.use('/faleConosco' , helpetRouters) */
+app.use('/login', helpetRoutes)
+app.use('/faleConosco' , helpetRouters)  */
 
 
 app.listen(8002, () => {

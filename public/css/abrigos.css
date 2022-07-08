@@ -1,65 +1,95 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); fonte Handlee */
-/* @import url('https://fonts.googleapis.com/css2?family=Mali&display=swap'); fonte mali */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
 
+main{
+    font-family: 'Mali', Impact, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 0 5px black;
+    color: aliceblue;
+  
+}
+main section:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
 
 
 body{
-    background-image: url(../pag3_abrigos/img/wallpaper__1920____1080_px_.png);
-    font-family: 'Handlee', cursive;
-    /* font-family: 'Mali', cursive; */
+    background-image: url("../../public/img/background.png");
+    background-color: rgb(255, 255, 255);
+    opacity: calc();
     
-}
-.sobre-abrigos{
-    display: flex;
-    align-items:center;
-}
-.info-abrigos{  
-    margin: 30px;
-    padding: 20px;
-    display:inline-block;
-    width: 350px;
-    background-color: #f27127;
-    border-radius: 10%;
-}
-.foto-sobre-abrigos{
-    border-radius: 10%;
-    margin: 25px
-}
-.cards-abrigos{
-    display:flex;
-    justify-content: center;
     
-}
-.card{
-    background-color: #f27127;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-left: 30px;
-    margin: 40px;
-    border-radius: 10%;
-    
-}
-.logo-abrigo{
-    text-align: center;      
-}
-.img-logo{
-    width: 90px;
-}
-.info-parceiro{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    flex-direction: column;
-}
-.pag-parceiro{
-    padding: 9px;
 }
 
-.link-pag{
-    text-align: center;
-    background: #401414;
-    color: #f27127; 
-    text-decoration: none;
-    padding: 2px;
+h1, h2 {
+    color: aliceblue;
+    text-shadow: 0 0 10px black;
+   
 }
+
+
+.encontre {
+    display: flex;
+    font-family: 'mali', cursive;
+    font-size: 32px;
+    margin: 20px;
+    border-radius: 10px;
+  
+  
+   
+ 
+}
+
+
+.regioes {
+    
+    font-family: 'mali', cursive;
+    align-items: left;
+    font-size: 24px;
+    margin: 20px;
+    margin-top: -25px;
+ 
+}
+
+
+
+#abrigos-box{
+
+    background-color: #f27c22;
+    border-radius: 20px;
+    margin: auto;
+   
+
+   
+   
+}
+
+#abrigos-box ul li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+   box-sizing: border-box;
+   box-shadow: 1px 1px 1px rgb(155, 92, 9) ;
+   color:aliceblue ;
+   justify-content: space-around;
+    
+}
+
+
+.custom-select {
+    font-size: 24px;
+    margin: auto;
+    font-weight: 300;
+}
+
+
+
+
+

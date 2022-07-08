@@ -1,49 +1,49 @@
 const helpetRoutes = require('../routes/users.routes')
 
 const helpetController = {
+
 /* home */
-
-
-/* maps abrigos */
-
+home: (request, response) => {
+    response.render('home')
+},
 
 /* abrigos */
+abrigos: (request, response) => {
+    response.render('abrigos')
+},
 
-
+/* abrigos parceiros 
 abrigosParceiros: (request, response) => {
-       response.render('abrigos')
+       response.render('abrigosParceiros')
 },
 
-/* pag abrigos */
-
-pagAbrigo: (request, response) => {
-    response.render('PagParceiro')
-},
-
+ pag abrigos 
+pagParceiro: (request, response) => {
+    response.render('pagParceiro')
+},*/
 
 /* Sobre nós */
-
-
 sobreNos: (request, response) => {
     response.render('sobreNos') 
 },
 
+/*   login  
+login: (request, response) => {
+    response.render('login')
+},
 
-/* login  */
+ cadastro 
+cadastro: (request, response) => {
+    response.render('cadastro')
+}, */
 
-
-/* cadastro */
-
-
-/* fale conosco */
-
-/* const helpetController = {
-    faleConosco: (request, response) => {
-        response.render('faleConosco')
-    }
+/* fale conosco 
+faleConosco: (request, response) => {
+    response.render('faleConosco')
 }
- */
+*/
+
 }
 
 
-module.exports = helpetController
+module.exports = helpetController;

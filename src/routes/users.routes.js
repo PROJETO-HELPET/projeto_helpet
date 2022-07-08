@@ -4,33 +4,14 @@ const helpetController = require ('../controllers/usersController')
 const helpetRoutes = Router();
 
 
-/* home */
 
-
-/* maps abrigos */
-
-
-/* abrigos */
-
-helpetRoutes.get("", helpetController.abrigosParceiros);
-
-/* pag abrigos */
-
-helpetRoutes.get("", helpetController.pagAbrigo);
-
-/* sobre nos */
-
-helpetRoutes.get("", helpetController.sobreNos);
-
-/* login  */
-
-
-/* cadastro */
-
-
-
-/* fale conosco */
-
-/* helpetRoutes.get("", helpetController.faleConosco); */
+helpetRoutes.get("/", helpetController.home);
+helpetRoutes.get("/abrigos", helpetController.abrigos);
+/* helpetRoutes.get("/abrigosParceiros", helpetController.abrigosParceiros);
+helpetRoutes.get("/abrigosParceiros/pagParceiro", helpetController.pagParceiro); */
+helpetRoutes.get("/sobreNos", helpetController.sobreNos);
+/* helpetRoutes.get("/login", helpetController.login);
+helpetRoutes.get("/login/cadastro", helpetController.cadastro); */
+/* helpetRoutes.get("/faleConosco", helpetController.faleConosco); */
 
 module.exports = helpetRoutes;

@@ -6,6 +6,9 @@
     outline: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(/img/background.png);
+}
 header {
     display: flex;
     justify-content: space-between;

@@ -20,7 +20,7 @@ main {
 }
 
 body {
-    background-image: url(./Wallpaper.png);
+    background-image: url(/img/background.png);
 }
 header{
     background-color: #f27127;
