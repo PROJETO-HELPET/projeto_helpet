@@ -1,11 +1,10 @@
 const { Router }= require('express');
-const helpetController = require ('../controllers/abrigosParceiros.controller')
+const helpetController = require ('../controllers/abrigosParceiros.Controller')
 
 const helpetRoutes = Router();
 
 
+helpetRoutes.get("/", helpetController.abrigosParceiros);
 
-helpetRoutes.get("/abrigosParceiros", helpetController.abrigosParceiros);
-helpetRoutes.get("/abrigosParceiros/pagParceiro", helpetController.pagParceiro);
 
 module.exports = helpetRoutes;

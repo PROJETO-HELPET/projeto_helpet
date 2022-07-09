@@ -8,10 +8,11 @@ abrigosParceiros: (request, response) => {
     response.render('abrigosParceiros')
 },
 
-/* pag abrigos */
+/* pag abrigos 
 pagParceiro: (request, response) => {
  response.render('pagParceiro')
 },
+*/
 
 
 }

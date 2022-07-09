@@ -4,6 +4,10 @@ const helpetRoutes = require('./routes/users.routes');
 const loginRoutes = require('./routes/login.routes');
 const faleConoscoRoutes = require('./routes/faleConosco.routes');
 const abrigosParceirosRoutes = require('./routes/abrigosParceiros.routes');
+const abrigosRoutes = require ('./routes/abrigos.routes');
+const cadastroRoutes = require ('./routes/cadastro.routes')
+const pagParceiroRoutes = require ('./routes/pagParceiro.routes')
+
 
 const app = express();
 
@@ -14,16 +18,12 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 
 app.use('/', helpetRoutes);
-app.use('/login', loginRoutes);
-app.use('/faleConosco', faleConoscoRoutes);
+app.use('/abrigos', abrigosRoutes)
 app.use('/abrigosParceiros', abrigosParceirosRoutes);
-
-/* app.use('/abrigos', helpetRoutes)
-app.use('/abrigosParceiros', helpetRoutes)
-app.use('/pagParceiro', helpetRoutes)
-app.use('/sobreNos', helpetRoutes)
-app.use('/login', helpetRoutes)
-app.use('/faleConosco' , helpetRouters)  */
+app.use('/abrigosParceiros/pagParceiro', pagParceiroRoutes)
+app.use('/login', loginRoutes);
+app.use('/login/cadastro', cadastroRoutes);
+app.use('/faleConosco', faleConoscoRoutes);
 
 
 app.listen(8002, () => {

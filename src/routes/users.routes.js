@@ -6,12 +6,14 @@ const helpetRoutes = Router();
 
 
 helpetRoutes.get("/", helpetController.home);
-helpetRoutes.get("/abrigos", helpetController.abrigos);
-/* helpetRoutes.get("/abrigosParceiros", helpetController.abrigosParceiros);
-helpetRoutes.get("/abrigosParceiros/pagParceiro", helpetController.pagParceiro); */
 helpetRoutes.get("/sobreNos", helpetController.sobreNos);
-/* helpetRoutes.get("/login", helpetController.login);
-helpetRoutes.get("/login/cadastro", helpetController.cadastro); */
-/* helpetRoutes.get("/faleConosco", helpetController.faleConosco); */
+/*
+helpetRoutes.get("/abrigos", helpetController.abrigos); 
+helpetRoutes.get("/abrigosParceiros", helpetController.abrigosParceiros);
+helpetRoutes.get("/abrigosParceiros/pagParceiro", helpetController.pagParceiro);
+helpetRoutes.get("/login", helpetController.login);
+helpetRoutes.get("/login/cadastro", helpetController.cadastro);
+helpetRoutes.get("/faleConosco", helpetController.faleConosco); 
+*/
 
 module.exports = helpetRoutes;

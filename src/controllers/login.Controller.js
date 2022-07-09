@@ -8,10 +8,10 @@ login: (request, response) => {
     response.render('login')
 },
 
-/* cadastro */
+/* cadastro 
 cadastro: (request, response) => {
     response.render('cadastro')
-},
+}, */
 
 }
 module.exports = loginController;

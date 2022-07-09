@@ -6,7 +6,7 @@ const helpetRoutes = Router();
 
 helpetRoutes.get("/", helpetController.login);
 
-/* helpetRoutes.get("/login/cadastro", helpetController.cadastro); */
+/* helpetRoutes.get("/login/cadastro", helpetController.cadastro);  */
 
 
 module.exports = helpetRoutes;
