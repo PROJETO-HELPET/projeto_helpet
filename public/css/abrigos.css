@@ -20,7 +20,7 @@ main section:nth-child(1) {
 
 
 body{
-    background-image: url("../../public/img/background.png");
+    background-image: url("../img/background.png");
     background-color: rgb(255, 255, 255);
     opacity: calc();
     
@@ -52,9 +52,11 @@ h1, h2 {
     font-family: 'mali', cursive;
     align-items: left;
     font-size: 24px;
-    margin: 20px;
+    margin: 10px;
     margin-top: -25px;
- 
+    background-color: #f27c22;
+    border-radius: 30px;
+
 }
 
 
@@ -74,7 +76,7 @@ h1, h2 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 15px 20px;
    box-sizing: border-box;
    box-shadow: 1px 1px 1px rgb(155, 92, 9) ;
    color:aliceblue ;
