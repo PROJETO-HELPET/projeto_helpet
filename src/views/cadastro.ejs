@@ -65,48 +65,48 @@
 
     <main>
         <h2>Cadastro</h2>
-        <form action="cadastro" method="post">
+        <form action="/login/cadastro" method="post">
         <div class="divpai">
                 <br></br>
                 <div class="divfilho">
                       <label for="email">Email:</label>
-                      <input type="email" placeholder="  Ex: abrigo@gmail.com">
+                      <input type="email" name="Email" id="" placeholder="  Ex: abrigo@gmail.com">
                 </div>
                 <div class="divfilho">
                     <label for="Nome do abrigo">Nome do proprietário:</label>
-                    <input type="text" placeholder="  Ex: Lar dos vira-latas">
+                    <input type="text" name="NomeProprietario" id="" placeholder="  Ex: Lar dos vira-latas">
                  </div>
                  <div class="divfilho">
                      <label for="capadidade">Capacidade do abrigo:</label>
-                     <input type="text" placeholder="  Ex: comportamos 100 caês">
+                     <input type="text" name="Capacidade" id="" placeholder="  Ex: comportamos 100 caês">
                 </div>
                 <div class="divfilho">
                     <label for="numero">Número do abrigo:</label>
-                    <input type="number" placeholder="  Ex:(xx)xxxxx-xxxx">
+                    <input type="number" name="Numero" id="" placeholder="  Ex:(xx)xxxxx-xxxx">
                  </div>
                  <div class="divfilho">
                     <label for="endereco">Endereço:</label>
-                    <input type="text" placeholder="  Ex: Rua Felipe dos Santos">
+                    <input type="text" name="Endereco" id="" placeholder="  Ex: Rua Felipe dos Santos">
               </div>
               <div class="divfilho">
                   <label for="Bairro">Bairro:</label>
-                  <input type="text" placeholder="  Ex: Jardim Guanabara">
+                  <input type="text" name="Bairro" id="" placeholder="  Ex: Jardim Guanabara">
                </div>
                <div class="divfilho">
                    <label for="Nome do abrigo">Nome do abrigo:</label>
-                   <input type="text" placeholder="  Ex: Lar dos vira-latas">
+                   <input type="text" name="NomeDoAbrigo" id="" placeholder="  Ex: Lar dos vira-latas">
               </div>
               <div class="divfilho">
                   <label for="senha">Senha:</label>
-                  <input type="password" placeholder="  Ex: abrigo123">
+                  <input type="password" name="Senha" id="" placeholder="  Ex: abrigo123">
                </div>
                <div class="divfilho">
                 <label for="senha">Confirme sua senha:</label>
-                <input type="confirmpassword" placeholder="  Ex: abrigo123">
+                <input type="confirmpassword" name="ConfirmarSenha" id="" placeholder="  Ex: abrigo123">
              </div>
               <div>
                 <label for="sobre">Fale sobre o abrigo:</label>
-                <textarea name="sobre" id="sobre" cols="10" rows="10" placeholder="Ex: Situação dos animais, estrutura do abrigo..."></textarea>
+                <textarea name="sobre" id="sobre" cols="10" rows="10" placeholder="Ex: Data de criação do abrigo, estrutura do abrigo..."></textarea>
               </div>
               <div id="botao">
                <button type="submit">Enviar</button> 

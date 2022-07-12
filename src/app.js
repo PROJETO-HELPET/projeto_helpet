@@ -8,7 +8,6 @@ const abrigosRoutes = require ('./routes/abrigos.routes');
 const cadastroRoutes = require ('./routes/cadastro.routes')
 const pagParceiroRoutes = require ('./routes/pagParceiro.routes')
 
-
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -16,6 +15,8 @@ app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
 
 app.use('/', helpetRoutes);
 app.use('/abrigos', abrigosRoutes)
