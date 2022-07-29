@@ -19,59 +19,7 @@
 
 <body> 
     
-    <header>
-        <div>
-            <figure id="logotipo">
-                <img class="logo" src="/img/dog_br_transp.png" onmouseover="this.src='/img/6_1.png'" onmouseout="this.src='/img/dog_br_transp.png'" alt="Logotipo da empresa Helpet, cachorro de perfil vazado no fundo branco.">
-            </figure>
-
-            <figure id="helpet">
-                <img class= "helpet" src="/img/helpet.png" onmouseover="this.src='/img/6_2.png'" onmouseout="this.src='/img/helpet.png'" alt="Nome da empresa Helpet acompanhando o logotipo.">
-            </figure>
-        
-        </div>
-        
-
-        <nav>
-            <ul id="menu">
-                <li>
-                    <a href="/">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/abrigos">
-                        Abrigos
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/abrigosParceiros">
-                        Abrigos Parceiros
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/sobreNos">
-                        Sobre nós
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/login">
-                        Login
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/faleconosco">
-                        Fale conosco
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <%-include('./partials/header')%>
 
     <main>
     <div id="tudo">
@@ -128,44 +76,7 @@
     </div>
 </main>
 
-<footer>
-    <div class="links">
-        <div class="links_1">
-            <ul>
-                <li class="titulo">Menu</li>
-                <li>
-                    <a href="/sobreNos">Sobre nós</a>
-                </li>
-                <li>
-                    <a href="/login/cadastro">Cadastro</a>
-                </li>
-                <li>
-                    <a href="/abrigosParceiros">Abrigos parceiros</a>
-                </li>
-                <li>
-                    <a href="/abrigosParceiros">Abrigos</a>
-                </li>
-                <li>
-                    <a href="/">home</a>
-                </li>
-            </ul>
-        </div>
-        <div class="redes">
-            <img src="/img/instagram_2.png" alt="ícone do Instagram">
-            <img src="/img/facebook_2.png" alt="ícone do Facebook">
-            <img src="/img/youtube_2.png" alt="ícone do Youtube">
-         </div>
-    </div>
+    <%-include('./partials/footer')%>
 
-
-    <div class="img_logo">
-        
-            <img class="cachorrinho" src="/img/6_1.png" alt="Logotipo da empresa marrom cachorrinho vazado em branco">
-        
-            <img class="pet" src="/img/6_2.png" alt="Logotipo da empresa marrom escrito helpet">
-    </div>
-
-
-</footer>
 </body>
 </html>
