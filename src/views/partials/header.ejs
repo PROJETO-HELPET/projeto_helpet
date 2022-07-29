@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/css/headerFooter.css">
 </head>
 <body>
-    <header>
-        <div>
+    <header id="header">
+        <div id="logo">
             <figure id="logotipo">
                 <img class="logo" src="/img/dog_br_transp.png" onmouseover="this.src='/img/6_1.png'" onmouseout="this.src='/img/dog_br_transp.png'" alt="Logotipo da empresa Helpet, cachorro de perfil vazado no fundo branco.">
             </figure>
@@ -20,13 +20,20 @@
         
         </div>
         
-
-       
-        <nav>
-            <ul id="menu">
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"aria-expanded="false">
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
                 <li>
                     <a href="/">
                         Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/sobreNos">
+                        Sobre nós
                     </a>
                 </li>
 
@@ -39,12 +46,6 @@
                 <li>
                     <a href="/abrigosParceiros">
                         Abrigos Parceiros
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/sobreNos">
-                        Sobre nós
                     </a>
                 </li>
 
@@ -62,5 +63,6 @@
             </ul>
         </nav>
     </header>
+    <script src="menu.js"></script>
 </body>
 </html>
