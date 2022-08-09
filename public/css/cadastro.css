@@ -13,11 +13,12 @@ body{
 main {
     min-height: 100vh;
     width: 100vw;
-    padding: 0 10%;
+    padding: 10% 10%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     box-sizing: border-box;
+    
 }    
 
 
@@ -42,7 +43,8 @@ main {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 input{
     display: flex;
