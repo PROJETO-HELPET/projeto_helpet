@@ -4,18 +4,18 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('abrigos', {
       id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       nome: {
-        type: DataTypes.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: false,
       },
       endereco_id: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         references: {
           model: {
             tableName: 'enderecos',
@@ -24,12 +24,12 @@ module.exports = {
         },
       },
       sobre: {
-        type: DataTypes.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: false,
       },
       usuarios_id: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         references: {
           model: {
             tableName: 'usuarios',

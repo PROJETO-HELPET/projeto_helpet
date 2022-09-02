@@ -4,28 +4,29 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('sociais', {
       id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       nome: {
-        type: DataTypes.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: false,
       },
       link: {
-        type: DataTypes.STRING,
+        type: Sequelize.DataTypes.STRING,
         allowNull: false,
       },
       abrigos_id: {
         allowNull: false,
-        type: DataTypes.str,
+        type: Sequelize.DataTypes.INTEGER,
         references: {
           model: {
             tableName: 'abrigos',
           },
           key: 'id'
         },
+        allowNull: false
       },
     })
 
