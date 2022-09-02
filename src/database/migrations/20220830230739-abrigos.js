@@ -42,9 +42,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    // return queryInterface.sequelize.query(`
-    //   DROP TABLE abrigos
-    // `);
     return queryInterface.dropTable('abrigos');
   }
 };

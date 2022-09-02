@@ -43,6 +43,6 @@ module.exports = (sequelize) => {
   })
 
   
-  return usuario;
+  return Usuario;
 };
 

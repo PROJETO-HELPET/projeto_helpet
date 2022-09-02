@@ -31,6 +31,6 @@ module.exports = (sequelize) => {
     foreningKey: 'abrigo_id',
   })
 
-  return ususarios;
+  return social;
 };
 

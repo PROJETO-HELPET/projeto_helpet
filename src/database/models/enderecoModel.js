@@ -41,5 +41,5 @@ module.exports = (sequelize) => {
     foreningKey: 'endereco_id',
   })
 
-  return ususarios;
+  return endereco;
 };
