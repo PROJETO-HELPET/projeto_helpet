@@ -28,7 +28,7 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
 
-      /* tabela ligada a abrigos  */
+      
     },
     {
       tableName: "enderecos",
@@ -36,10 +36,6 @@ module.exports = (sequelize) => {
     }
   );
 
-  endereco.belongsTo(abrigo, {
-    as: 'abrigo',
-    foreningKey: 'endereco_id',
-  })
-
+ 
   return endereco;
 };

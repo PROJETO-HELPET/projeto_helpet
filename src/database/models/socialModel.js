@@ -26,11 +26,7 @@ module.exports = (sequelize) => {
     }
   );
 
-  social.belongsTo(abrigo, {
-    as: 'abrigo',
-    foreningKey: 'abrigo_id',
-  })
-
+ 
   return social;
 };
 

@@ -37,10 +37,12 @@ module.exports = (sequelize) => {
     }
   );
 
-  usuario.hasMany(abrigo, {
-    as: 'abrigo',
-    foreningKey: 'usuario_id',
-  })
+  usuario.associate = (models) => {
+    usuario.hasMany(models.abrigoModel, {
+      as: 'abrigos',
+      foreignKey: 'usuarioId'
+    });
+  }
 
   
   return usuario;

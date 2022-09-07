@@ -37,6 +37,16 @@ module.exports = {
           key: 'id'
         },
       },
+      endereco_id: {
+        allowNull: false,
+        type: Sequelize.DataTypes.INTEGER,
+        references: {
+          model: {
+            tableName: 'enderecos',
+          },
+          key: 'id'
+        },
+      },
     })
 
   },

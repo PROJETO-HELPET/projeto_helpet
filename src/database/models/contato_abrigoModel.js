@@ -26,10 +26,6 @@ module.exports = (sequelize) => {
     }
   );
   
-  contato_abrigo.belongsTo(abrigo, {
-    as: 'abrigo',
-    foreningKey: 'abrigo_id',
-  })
-
+ 
   return contato_abrigo;
 };

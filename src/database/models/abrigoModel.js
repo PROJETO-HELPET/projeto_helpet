@@ -27,6 +27,10 @@ module.exports = (sequelize) => {
         type: DataTypes.INTEGER,
         field: usuarios_id
       },
+      enderecoID:{
+        type: DataTypes.INTEGER,
+        field: endereco_id
+      },
     },
     {
       tableName: "abrigos",
@@ -34,10 +38,28 @@ module.exports = (sequelize) => {
     }
   );
 
-  abrigo.hasMany(usuario, {
-    as: 'usuarios',
-    foreningKey: 'usuarios_id',
-  })
-  
+
+  abrigo.associate = (models) => {
+    abrigo.belongsTo(models.usuarioModel, {
+     as: 'usuario',
+     foreignKey: 'usuarioId'
+   });
+
+   abrigo.hasMany(models.contato_abrigoModel, {
+      as: 'contatos',
+     foreignKey: 'abrigoId'
+   });
+ abrigo.hasMany(models.socialModel, {
+      as: 'sociais',
+     foreignKey: 'abrigoId'
+   });
+ }
+ abrigo.hasOne(models.enderecoModel, {
+  as: 'endereco',
+ foreignKey: 'enderecoId'
+});
+
+
+   
   return abrigo;
 };

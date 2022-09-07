@@ -17,7 +17,7 @@ module.exports = {
         type: Sequelize.DataTypes.BIGINT,
         allowNull: false,
       },
-      usuarios_id: {
+      abrigo_id: {
         allowNull: false,
         type: Sequelize.DataTypes.INTEGER,
         references: {
