@@ -5,8 +5,12 @@ const path = require('path')
 
 const multerDiskStorage = multer.diskStorage({
     destination: (req,file,callback)=>{
-       
-        callback(null,'public/profile');
+       if(file.fieldname==='sualogo'){
+        callback(null,'public/profile')
+       }else{
+        callback(null,'public/foto')
+       }
+        
     },
     filename: (req,file,callback)=>{
         callback(null,file.fieldname +'-'+ Date.now()+path.extname(file.originalname));
@@ -18,7 +22,12 @@ const helpetRoutes = Router();
 
 
 helpetRoutes.get("", helpetController.viewForm); 
-helpetRoutes.post("", upload.single('sualogo'),helpetController.dadosSalvos)
+helpetRoutes.post(
+    "",
+    upload.fields([
+        {name:'sualogo', maxCount:1},
+        {name:'suafoto', maxCount:1}]),
+    helpetController.dadosSalvos)
 
 
 module.exports = helpetRoutes;
