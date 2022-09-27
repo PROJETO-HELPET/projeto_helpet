@@ -3,7 +3,7 @@ const helpetController = require ('../controllers/faleConosco.Controller')
 
 const helpetRoutes = Router();
 
-helpetRoutes.get("/cep", helpetController.faleConosco);
+helpetRoutes.get("/", helpetController.faleConosco);
 
 
 module.exports = helpetRoutes;
