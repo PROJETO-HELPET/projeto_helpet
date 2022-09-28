@@ -15,7 +15,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      valor: {
+      contato: {
         type: DataTypes.STRING,
         allowNull: false,
       },

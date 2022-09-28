@@ -11,17 +11,19 @@ module.exports = (sequelize) => {
         autoIncrement: true,
         allowNull: false,
       },
-      nome: {
+      nomeAbrigo: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: nome_abrigo
+      },
+      emailAbrigo: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        field: email_abrigo
       },
       sobre: {
         type: DataTypes.TEXT,
         allowNull: false,
-      },
-      foto: {
-        allowNull: false,
-        type: DataTypes.INTEGER,
       },
       usuarioId:{
         type: DataTypes.INTEGER,

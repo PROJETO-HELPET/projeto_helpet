@@ -9,11 +9,11 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
-      nome: {
+      facebook: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
       },
-      link: {
+      instagram: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
       },

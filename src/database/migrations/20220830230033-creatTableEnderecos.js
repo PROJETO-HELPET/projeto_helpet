@@ -25,6 +25,10 @@ module.exports = {
         type: Sequelize.DataTypes.STRING,
         allowNull: true,
       },
+      bairro: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: true,
+      },
     })
 
   },

@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
       },
-      valor: {
+      contato: {
         type: Sequelize.DataTypes.BIGINT,
         allowNull: false,
       },

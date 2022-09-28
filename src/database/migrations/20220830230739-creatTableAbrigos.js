@@ -9,9 +9,13 @@ module.exports = {
         autoIncrement: true,
         allowNull: false,
       },
-      nome: {
+      nome_abrigo: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
+      },
+      email_abrigo: {
+        allowNull: false,
+        type: Sequelize.DataTypes.INTEGER,
       },
       endereco_id: {
         allowNull: false,
@@ -36,17 +40,7 @@ module.exports = {
           },
           key: 'id'
         },
-      },
-      endereco_id: {
-        allowNull: false,
-        type: Sequelize.DataTypes.INTEGER,
-        references: {
-          model: {
-            tableName: 'enderecos',
-          },
-          key: 'id'
-        },
-      },
+      }
     })
 
   },

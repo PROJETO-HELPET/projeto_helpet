@@ -11,7 +11,7 @@ module.exports = (sequelize) => {
         autoIncrement: true,
         allowNull: false,
       },
-      CEP: {
+      cep: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -27,6 +27,10 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      bairro: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      }
 
       
     },
