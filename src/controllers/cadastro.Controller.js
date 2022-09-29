@@ -21,7 +21,7 @@ dadosSalvos: async (request, response) => {
     sobre, tipo, contatos, facebook, instagram  } = request.body;
 
     try {
-      const novoUsuario =  usuario.create({
+      const novoUsuario = await usuario.create({
         nome,
         sobrenome,
         email,
@@ -29,7 +29,7 @@ dadosSalvos: async (request, response) => {
         fixo,
         senha: bcrypt.hashSync(senha, 10),
       });
-      const novoEndereco =  endereco.create({
+      const novoEndereco = await endereco.create({
         cep,
         rua,
         complemento,
@@ -38,7 +38,7 @@ dadosSalvos: async (request, response) => {
        
       });
 
-      const [usuario, endereco] = await Promise.all([novoUsuario, novoEndereco])
+      const [usuario, endereco] = await Promise.all([novoUsuario, novoEndereco]) 
 
       const novoAbrigo = await abrigo.create({
         usuarioId: usuario.id,
@@ -58,7 +58,7 @@ dadosSalvos: async (request, response) => {
         instagram,
         abrigoId: abrigo.id
       })
-      return response.status(201).json(newUser);
+      return response.status(201).json(novoUsuario);
 
     } catch (e) {
       console.log(e);

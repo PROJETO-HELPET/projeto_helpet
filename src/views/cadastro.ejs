@@ -5,95 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar abrigos</title>
+    <script type="module" defer src="/js/validadores.js"></script>
     <link rel="stylesheet" href="/css/cadastro.css">
 </head>
 <body>
     <%-include('./partials/header')%>
     <main>
         <h2>Cadastro</h2>
-        <form action="/login/cadastro" method="post" enctype="multipart/form-data">
+        <form action="/login/cadastro" method="POST" enctype="multipart/form-data">
         <div class="divpai">
                 <br></br>
                 <div class="divfilho">
                       <label for="email">Email:</label>
-                      <input type="email" name="email" id="" placeholder="  Ex: abrigo@gmail.com">
+                      <input type="email" name="email" placeholder="  Ex: abrigo@gmail.com">
                 </div>
                 
           <div class="divfilho">
               <label for="nome">Nome:</label>
-              <input type="text" name="nome" id="" placeholder="  Ex: Lar dos vira-latas">
+              <input type="text" name="nome" placeholder="">
            </div>
            
            <div class="divfilho">
                <label for="sobrenome">Sobrenome:</label>
-               <input type="text" name="sobrenome" id="" placeholder="  Ex: comportamos 100 caês">
+               <input type="text" name="sobrenome" placeholder=" ">
           </div>
 
           <div class="divfilho">
               <label for="numero">Telefone:</label>
-              <input type="number" name="fixo" id="" placeholder="  Ex:(xx)xxxxx-xxxx">
+              <input type="number" name="fixo"  placeholder="  Ex:(xx)xxxxx-xxxx">
            </div>
            <div class="divfilho">
             <label for="celular">Celular:</label>
-            <input type="number" name="celular" id="" placeholder="  Ex:(xx)xxxxx-xxxx">
+            <input type="number" name="celular"  placeholder="  Ex:(xx)xxxxx-xxxx">
          </div>
          
 
         <div class="divfilho">
             <label for="numero">Contato do abrigo:</label>
-            <input type="number" name="contato" id="" placeholder="  Ex:(xx)xxxxx-xxxx">
+            <input type="number" name="contato"  placeholder="  Ex:(xx)xxxxx-xxxx">
          </div>
 
          <div class="divfilho">
             <label for="endereco">Endereço:</label>
-            <input type="text" name="endereco" id="" placeholder="  Ex: Rua Felipe dos Santos">
+            <input type="text" name="endereco"  placeholder="  Ex: Rua Felipe dos Santos">
       </div>
 
       <div class="divfilho">
           <label for="Bairro">Bairro:</label>
-          <input type="text" name="Bairro" id="" placeholder="  Ex: Jardim Guanabara">
+          <input type="text" name="Bairro"  placeholder="  Ex: Jardim Guanabara">
        </div>
 
        <div class="divfilho">
         <label for="numero">Número:</label>
-        <input type="number" name="numero" id="" placeholder="  Ex: comportamos 100 caês">
+        <input type="number" name="numero"  placeholder="">
         </div>
 
        <div class="divfilho">
            <label for="Nome do abrigo">Nome do abrigo:</label>
-           <input type="text" name="nomeAbrigo" id="" placeholder="  Ex: Lar dos vira-latas">
+           <input type="text" name="nomeAbrigo"  placeholder="  Ex: Lar dos vira-latas">
       </div>
 
             
      <div class="divfilho">
         <label for="email">Email do abrigo:</label>
-        <input type="email" name="emailAbrigo" id="" placeholder="  Ex: abrigo@gmail.com">
+        <input type="email" name="emailAbrigo"  placeholder="  Ex: abrigo@gmail.com">
   </div>
 
   <div class="divfilho">
     <label for="Instagram">Instagram:</label>
-    <input type="text" name="instagram" id="" placeholder="  Ex: Lar dos vira-latas">
+    <input type="text" name="instagram"  placeholder="  Ex: Lar dos vira-latas">
 </div>
 
 
 <div class="divfilho">
     <label for="Facebook">Facebook:</label>
-    <input type="text" name="facebook" id="" placeholder="  Ex: Lar dos vira-latas">
+    <input type="text" name="facebook"  placeholder="  Ex: Lar dos vira-latas">
 </div>
 
 <div class="divfilho">
     <label for="Whatsapp">Whatsapp:</label>
-    <input type="text" name="Whatsapp" id="" placeholder="  Ex: Lar dos vira-latas">
+    <input type="text" name="whatsapp"  placeholder="  Ex: Lar dos vira-latas">
 </div>
 
         <div class="divfilho">
             <label for="senha">Senha:</label>
-            <input type="password" name="Senha" id="" placeholder="  Ex: abrigo123">
+            <input type="password" name="senha"  placeholder="  Ex: abrigo123">
          </div>
 
          <div class="divfilho">
           <label for="senha">Confirme sua senha:</label>
-          <input type="password" name="senha" id="" placeholder="  Ex: abrigo123">
+          <input type="password" name="confirmarSenha"  placeholder="  Ex: abrigo123">
        </div>
        <div>
         <label for="sobre">Fale sobre você:</label>
@@ -109,15 +110,12 @@
         <input type="file" name="sualogo" id="sualogo"  accept="*/image">
      </div>
 
-    
-      
               <div id="botao">
                <button type="submit">Enviar!</button> 
               </div>
             </div>
         </form> 
     </main>
-    <%-include('./partials/footer')%>  
-    
+    <%-include('./partials/footer')%>     
 </body>
 </html>
