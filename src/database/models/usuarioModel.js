@@ -30,6 +30,10 @@ module.exports = (sequelize) => {
         allowNull: false,
         type: DataTypes.INTEGER,
       },
+      senha: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     {
       tableName: "usuarios",

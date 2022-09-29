@@ -30,6 +30,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DataTypes.INTEGER,
       },
+      senha: {
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false,
+      },
     })
 
   },
