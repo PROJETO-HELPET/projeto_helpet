@@ -19,17 +19,22 @@ module.exports = {
         allowNull: false,
       },
       email: {
+        type: Sequelize.DataTypes.STRING,
         allowNull: false,
-        type: Sequelize.DataTypes.INTEGER,
       },
       celular: {
-        type: Sequelize.DataTypes.STRING,
+        type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
       },
       fixo: {
         allowNull: false,
         type: Sequelize.DataTypes.INTEGER,
       },
+      senha: {
+        allowNull: false,
+        type: Sequelize.DataTypes.STRING,
+      },
+
     })
 
   },

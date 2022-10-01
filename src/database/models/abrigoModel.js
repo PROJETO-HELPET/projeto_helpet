@@ -1,5 +1,4 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require('../config')
 
 module.exports = (sequelize) => {
   const abrigo = sequelize.define(
@@ -14,24 +13,24 @@ module.exports = (sequelize) => {
       nomeAbrigo: {
         type: DataTypes.STRING,
         allowNull: false,
-        field: nome_abrigo
+        field: 'nome_abrigo'
       },
       emailAbrigo: {
         type: DataTypes.STRING,
-        allowNull: false,
-        field: email_abrigo
+        allowNull: true,
+        field: 'email_abrigo'
       },
       sobre: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
-      usuarioId:{
+      usuarioId: {
         type: DataTypes.INTEGER,
-        field: usuarios_id
+        field: 'usuarios_id'
       },
-      enderecoID:{
+      enderecoId: {
         type: DataTypes.INTEGER,
-        field: endereco_id
+        field: 'endereco_id'
       },
     },
     {
@@ -43,25 +42,25 @@ module.exports = (sequelize) => {
 
   abrigo.associate = (models) => {
     abrigo.belongsTo(models.usuarioModel, {
-     as: 'usuario',
-     foreignKey: 'usuarioId'
-   });
+      as: 'usuario',
+      foreignKey: 'usuarioId'
+    });
 
-   abrigo.hasMany(models.contato_abrigoModel, {
+    abrigo.hasMany(models.contato_abrigoModel, {
       as: 'contatos',
-     foreignKey: 'abrigoId'
-   });
- abrigo.hasMany(models.socialModel, {
+      foreignKey: 'abrigoId'
+    });
+    abrigo.hasMany(models.socialModel, {
       as: 'sociais',
-     foreignKey: 'abrigoId'
-   });
- }
- abrigo.hasOne(models.enderecoModel, {
-  as: 'endereco',
- foreignKey: 'enderecoId'
-});
+      foreignKey: 'abrigoId'
+    });
+    abrigo.hasOne(models.enderecoModel, {
+      as: 'endereco',
+      foreignKey: 'enderecoId'
+    })
+};
 
 
-   
+
   return abrigo;
 };

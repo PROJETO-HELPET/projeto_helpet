@@ -1,5 +1,4 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require('../config')
+const { DataTypes } = require("sequelize");1
 
 module.exports = (sequelize) => {
   const contato_abrigo = sequelize.define(
@@ -13,11 +12,15 @@ module.exports = (sequelize) => {
       },
       tipo: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       contato: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      abrigoId: {
+        type: DataTypes.INTEGER,
+        field: 'abrigo_id'
       },
     },
     {
@@ -26,6 +29,11 @@ module.exports = (sequelize) => {
     }
   );
   
+  contato_abrigo.associate = (models) => {
+    contato_abrigo.belongsTo(models.abrigoModel, {
+      as: 'abrigo',
+      foreignKey: 'abrigoId'
+    })};
  
   return contato_abrigo;
 };

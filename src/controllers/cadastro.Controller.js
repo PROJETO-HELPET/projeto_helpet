@@ -4,11 +4,11 @@ const path = require('path')
 const { json } = require('express')
 const listaAbrigos = path.join(__dirname,'..','data','cadastroDataBase.json')
 const bcrypt = require("bcrypt");
-const usuario = require('../database/models/usuarioModel');
-const abrigo = require('../database/models/abrigoModel');
-const contato = require('../database/models/contato_abrigoModel'); 
-const endereco = require('../database/models/enderecoModel');
-const social = require('../database/models/socialModel');
+const {usuarioModel} = require('../database/');
+const {abrigoModel} = require('../database/');
+const {contato_abrigoModel} = require('../database/'); 
+const {enderecoModel} = require('../database/');
+const {socialModel} = require('../database/');
 
 const cadastroController = {
 
@@ -17,11 +17,10 @@ viewForm: (request, response) => {
    return response.render('cadastro')
 },
 dadosSalvos: async (request, response) => {
-    const {  nome, sobrenome, email, celular, fixo, senha, cep, rua, complemento, bairro, numero, nomeAbrigo,
-    sobre, tipo, contatos, facebook, instagram  } = request.body;
+    const {  nome, sobrenome, email, celular, fixo, senha, cep, cidade, rua, complemento, bairro, numero, nomeAbrigo, emailAbrigo, sobre, tipo, contato, facebook, instagram  } = request.body;
 
     try {
-      const novoUsuario = await usuario.create({
+      const novoUsuario =  usuarioModel.create({
         nome,
         sobrenome,
         email,
@@ -29,36 +28,38 @@ dadosSalvos: async (request, response) => {
         fixo,
         senha: bcrypt.hashSync(senha, 10),
       });
-      const novoEndereco = await endereco.create({
+      const novoEndereco =  enderecoModel.create({
         cep,
         rua,
         complemento,
         bairro,
+        cidade,
         numero
        
       });
 
       const [usuario, endereco] = await Promise.all([novoUsuario, novoEndereco]) 
 
-      const novoAbrigo = await abrigo.create({
+      const novoAbrigo = await abrigoModel.create({
         usuarioId: usuario.id,
         nomeAbrigo,
+        emailAbrigo,
         enderecoId: endereco.id,
         sobre
       })
 
-      const novoContatos = await contato.create({
+      const novoContatos = await contato_abrigoModel.create({
         tipo,
-        contatos,
-        abrigoId: abrigo.id
+        contato,
+        abrigoId: novoAbrigo.id
       })
 
-      const novoSociais = await social.create({
+      const novoSociais = await socialModel.create({
         facebook,
         instagram,
-        abrigoId: abrigo.id
+        abrigoId: novoAbrigo.id
       })
-      return response.status(201).json(novoUsuario);
+      return response.render('home');
 
     } catch (e) {
       console.log(e);

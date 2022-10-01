@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require('../config')
+
 
 module.exports = (sequelize) => {
   const social = sequelize.define(
@@ -13,11 +13,15 @@ module.exports = (sequelize) => {
       },
       facebook: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       instagram: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
+      },
+      abrigoId: {
+        type: DataTypes.INTEGER,
+        field: 'abrigo_id'
       },
     },
     {
@@ -26,6 +30,11 @@ module.exports = (sequelize) => {
     }
   );
 
+  social.associate = (models) => {
+    social.belongsTo(models.abrigoModel, {
+      as: 'abrigo',
+      foreignKey: 'abrigoId'
+    })};
  
   return social;
 };

@@ -1,5 +1,4 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require('../config')
 
 module.exports = (sequelize) => {
   const endereco = sequelize.define(
@@ -12,6 +11,10 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       cep: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      cidade: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -20,16 +23,16 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       complemento: {
-        allowNull: false,
-        type: DataTypes.INTEGER,
+        allowNull: true,
+        type: DataTypes.STRING,
       },
       numero: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.INTEGER,
+        allowNull: true,
       },
       bairro: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       }
 
       

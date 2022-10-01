@@ -11,11 +11,11 @@ module.exports = {
       },
       facebook: {
         type: Sequelize.DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       instagram: {
         type: Sequelize.DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       abrigo_id: {
         allowNull: false,

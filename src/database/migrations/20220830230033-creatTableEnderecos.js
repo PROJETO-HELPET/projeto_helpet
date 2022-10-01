@@ -10,6 +10,10 @@ module.exports = {
         allowNull: false,
       },
       cep: {
+        type: Sequelize.DataTypes.INTEGER,
+        allowNull: false,
+      },
+      cidade: {
         type: Sequelize.DataTypes.STRING,
         allowNull: false,
       },
@@ -18,11 +22,11 @@ module.exports = {
         allowNull: false,
       },
       complemento: {
-        allowNull: false,
-        type: Sequelize.DataTypes.INTEGER,
+        type: Sequelize.DataTypes.STRING,
+        allowNull: true,
       },
       numero: {
-        type: Sequelize.DataTypes.STRING,
+        type: Sequelize.DataTypes.INTEGER,
         allowNull: true,
       },
       bairro: {

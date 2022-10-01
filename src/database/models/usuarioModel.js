@@ -1,9 +1,9 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require('../config')
+
 
 module.exports = (sequelize) => {
   const usuario = sequelize.define(
-    "Usuario",
+    "usuario",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -19,16 +19,20 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       email: {
+        type: DataTypes.STRING,
         allowNull: false,
-        type: DataTypes.INTEGER,
       },
       celular: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       fixo: {
         allowNull: false,
         type: DataTypes.INTEGER,
+      },
+      senha: {
+        allowNull: false,
+        type: DataTypes.STRING,
       },
     },
     {
