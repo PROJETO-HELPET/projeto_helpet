@@ -2,13 +2,15 @@ const helpetRoutes = require('../routes/cadastro.routes')
 const fs = require('fs')
 const path = require('path')
 const { json } = require('express')
+const { validationResult } = require('express-validator') 
 const listaAbrigos = path.join(__dirname,'..','data','cadastroDataBase.json')
 const bcrypt = require("bcrypt");
-const usuario = require('../database/models/usuarioModel');
-const abrigo = require('../database/models/abrigoModel');
-const contato = require('../database/models/contato_abrigoModel'); 
-const endereco = require('../database/models/enderecoModel');
-const social = require('../database/models/socialModel');
+const salt = bcrypt.genSaltSync(10)
+const {usuarioModel} = require('../database/');
+const {abrigoModel} = require('../database/');
+const {contato_abrigoModel} = require('../database/'); 
+const {enderecoModel} = require('../database/');
+const {socialModel} = require('../database/');
 
 const cadastroController = {
 
@@ -17,48 +19,56 @@ viewForm: (request, response) => {
    return response.render('cadastro')
 },
 dadosSalvos: async (request, response) => {
-    const {  nome, sobrenome, email, celular, fixo, senha, cep, rua, complemento, bairro, numero, nomeAbrigo,
-    sobre, tipo, contatos, facebook, instagram  } = request.body;
+    const erros = validationResult(request);
+
+    if(!erros.isEmpty()){
+      console.log(erros.mapped())
+      return response.render('cadastro', { erros: erros.mapped() });
+    }
+
+    const {  nome, sobrenome, email, celular, fixo, senha, cep, cidade, rua, complemento, bairro, numero, nomeAbrigo, emailAbrigo, sobre, tipo, contato, facebook, instagram  } = request.body;
 
     try {
-      const novoUsuario =  usuario.create({
+      const novoUsuario =  usuarioModel.create({
         nome,
         sobrenome,
         email,
         celular,
         fixo,
-        senha: bcrypt.hashSync(senha, 10),
+        senha: bcrypt.hashSync(senha, salt),
       });
-      const novoEndereco =  endereco.create({
+      const novoEndereco =  enderecoModel.create({
         cep,
         rua,
         complemento,
         bairro,
+        cidade,
         numero
        
       });
 
-      const [usuario, endereco] = await Promise.all([novoUsuario, novoEndereco])
+      const [usuario, endereco] = await Promise.all([novoUsuario, novoEndereco]) 
 
-      const novoAbrigo = await abrigo.create({
+      const novoAbrigo = await abrigoModel.create({
         usuarioId: usuario.id,
         nomeAbrigo,
+        emailAbrigo,
         enderecoId: endereco.id,
         sobre
       })
 
-      const novoContatos = await contato.create({
+      const novoContatos = await contato_abrigoModel.create({
         tipo,
-        contatos,
-        abrigoId: abrigo.id
+        contato,
+        abrigoId: novoAbrigo.id
       })
 
-      const novoSociais = await social.create({
+      const novoSociais = await socialModel.create({
         facebook,
         instagram,
-        abrigoId: abrigo.id
+        abrigoId: novoAbrigo.id
       })
-      return response.status(201).json(newUser);
+      return response.render('home');
 
     } catch (e) {
       console.log(e);

@@ -11,11 +11,11 @@ module.exports = {
       },
       tipo: {
         type: Sequelize.DataTypes.STRING,
-        allowNull: false,
+        allowNull:true,
       },
       contato: {
-        type: Sequelize.DataTypes.BIGINT,
-        allowNull: false,
+        type: Sequelize.DataTypes.INTEGER,
+        allowNull: true,
       },
       abrigo_id: {
         allowNull: false,

@@ -14,8 +14,8 @@ module.exports = {
         allowNull: false,
       },
       email_abrigo: {
-        allowNull: false,
-        type: Sequelize.DataTypes.INTEGER,
+        type: Sequelize.DataTypes.STRING,
+        allowNull: true,
       },
       endereco_id: {
         allowNull: false,
@@ -28,8 +28,8 @@ module.exports = {
         },
       },
       sobre: {
-        type: Sequelize.DataTypes.STRING,
-        allowNull: false,
+        type: Sequelize.DataTypes.TEXT,
+        allowNull: true,
       },
       usuarios_id: {
         allowNull: false,

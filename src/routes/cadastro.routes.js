@@ -1,7 +1,8 @@
 const { Router }= require('express');
 const helpetController = require ('../controllers/cadastro.Controller');
 const multer = require('multer');
-const path = require('path')
+const path = require('path');
+const validadores = require('../../Middlewares/validadores');
 
 const multerDiskStorage = multer.diskStorage({
     destination: (req,file,callback)=>{
@@ -27,6 +28,7 @@ helpetRoutes.post(
     upload.fields([
         {name:'sualogo', maxCount:1},
         {name:'suafoto', maxCount:1}]),
+    validadores,
     helpetController.dadosSalvos)
 
 

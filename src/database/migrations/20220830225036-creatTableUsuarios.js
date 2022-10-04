@@ -19,11 +19,11 @@ module.exports = {
         allowNull: false,
       },
       email: {
+        type: Sequelize.DataTypes.STRING,
         allowNull: false,
-        type: Sequelize.DataTypes.INTEGER,
       },
       celular: {
-        type: Sequelize.DataTypes.STRING,
+        type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
       },
       fixo: {
@@ -31,9 +31,10 @@ module.exports = {
         type: Sequelize.DataTypes.INTEGER,
       },
       senha: {
-        type: Sequelize.DataTypes.STRING,
         allowNull: false,
+        type: Sequelize.DataTypes.STRING,
       },
+
     })
 
   },
