@@ -31,13 +31,8 @@ module.exports = (sequelize) => {
         type: DataTypes.INTEGER,
       },
       senha: {
-<<<<<<< HEAD
-        type: DataTypes.STRING,
-        allowNull: false,
-=======
         allowNull: false,
         type: DataTypes.STRING,
->>>>>>> feat_configControllers
       },
     },
     {
