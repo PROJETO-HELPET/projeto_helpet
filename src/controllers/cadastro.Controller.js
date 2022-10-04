@@ -2,8 +2,10 @@ const helpetRoutes = require('../routes/cadastro.routes')
 const fs = require('fs')
 const path = require('path')
 const { json } = require('express')
+const { validationResult } = require('express-validator') 
 const listaAbrigos = path.join(__dirname,'..','data','cadastroDataBase.json')
 const bcrypt = require("bcrypt");
+const salt = bcrypt.genSaltSync(10)
 const {usuarioModel} = require('../database/');
 const {abrigoModel} = require('../database/');
 const {contato_abrigoModel} = require('../database/'); 
@@ -17,6 +19,13 @@ viewForm: (request, response) => {
    return response.render('cadastro')
 },
 dadosSalvos: async (request, response) => {
+    const erros = validationResult(request);
+
+    if(!erros.isEmpty()){
+      console.log(erros.mapped())
+      return response.render('cadastro', { erros: erros.mapped() });
+    }
+
     const {  nome, sobrenome, email, celular, fixo, senha, cep, cidade, rua, complemento, bairro, numero, nomeAbrigo, emailAbrigo, sobre, tipo, contato, facebook, instagram  } = request.body;
 
     try {
@@ -26,7 +35,7 @@ dadosSalvos: async (request, response) => {
         email,
         celular,
         fixo,
-        senha: bcrypt.hashSync(senha, 10),
+        senha: bcrypt.hashSync(senha, salt),
       });
       const novoEndereco =  enderecoModel.create({
         cep,

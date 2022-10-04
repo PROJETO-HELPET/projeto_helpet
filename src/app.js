@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const session = require('express-session');
+const cookieParser = require('cookie-parser')
 const helpetRoutes = require('./routes/users.routes');
 const loginRoutes = require('./routes/login.routes');
 const faleConoscoRoutes = require('./routes/faleConosco.routes');
@@ -17,6 +19,12 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
+/* app.use(session ({
+        secret:'helpet',
+        resave:true,
+        saveUninitialized: true,
+}));
+app.use(cookieParser); */
 
 app.use('/', helpetRoutes);
 app.use('/abrigos', abrigosRoutes)
