@@ -17,6 +17,10 @@ module.exports = {
         type: Sequelize.DataTypes.STRING,
         allowNull: true,
       },
+      sualogo:{
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false
+      },
       endereco_id: {
         allowNull: false,
         type: Sequelize.DataTypes.INTEGER,
@@ -29,7 +33,7 @@ module.exports = {
       },
       sobre: {
         type: Sequelize.DataTypes.TEXT,
-        allowNull: true,
+        allowNull: false,
       },
       usuarios_id: {
         allowNull: false,

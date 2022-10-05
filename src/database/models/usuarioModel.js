@@ -34,6 +34,10 @@ module.exports = (sequelize) => {
         allowNull: false,
         type: DataTypes.STRING,
       },
+      suafoto: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
     },
     {
       tableName: "usuarios",

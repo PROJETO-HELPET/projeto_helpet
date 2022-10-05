@@ -34,7 +34,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DataTypes.STRING,
       },
-
+      suafoto:{
+        type: Sequelize.DataTypes.STRING,
+        allowNull: false
+      }
     })
 
   },

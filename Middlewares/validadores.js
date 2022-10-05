@@ -1,4 +1,6 @@
 const { check } = require('express-validator')
+const path = require('path');
+
 
 module.exports = [
 
@@ -12,5 +14,22 @@ module.exports = [
     check('cep').notEmpty().withMessage('É necessário informar um cep').isNumeric().bail().trim(),
     check('cidade').notEmpty().withMessage('É necessário informar a cidade').bail().trim(),
     check('rua').notEmpty().withMessage('É necessário informar a rua').bail().trim(),
-    check('senha').notEmpty().withMessage('A senha precisa ter mais de 6 caracteres').isLength({ min: 6 }).bail().trim()
-]
+    check('senha').notEmpty().withMessage('A senha precisa ter mais de 6 caracteres').isLength({ min: 6 }).bail().trim(),
+    check('suafoto', 'sualogo').custom((value, { request })=> {
+        let file = request.file
+        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        if(!file) {
+            throw new Error('Precisa escolher um arquivo');
+        } else {
+            let fileExtesion = path.extname(file.originalname);
+
+            if(!acceptedExtensions.includes(fileExtesion)) {
+                throw new Error(`as extensóes de arquivo permitidas são ${acceptedExtensions.join(', ')}`);
+            }
+        }
+        return true
+    })
+
+
+
+];

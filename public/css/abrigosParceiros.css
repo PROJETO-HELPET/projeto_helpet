@@ -11,15 +11,18 @@ body{
 }
 .sobre-abrigos{
     display: flex;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 }
 .info-abrigos{  
     margin: 30px;
     padding: 20px;
-    display:inline-block;
+    display:flex;
     width: 350px;
+    height: 200px;
     background-color: #f27127;
     border-radius: 10%;
+    flex-wrap: wrap;
 }
 .foto-sobre-abrigos{
     border-radius: 10%;

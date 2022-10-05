@@ -22,7 +22,7 @@ module.exports = (sequelize) => {
       },
       sobre: {
         type: DataTypes.TEXT,
-        allowNull: true,
+        allowNull: false,
       },
       usuarioId: {
         type: DataTypes.INTEGER,
@@ -31,6 +31,10 @@ module.exports = (sequelize) => {
       enderecoId: {
         type: DataTypes.INTEGER,
         field: 'endereco_id'
+      },
+      sualogo: {
+        type: DataTypes.STRING,
+        allowNull: true,
       },
     },
     {
@@ -45,7 +49,6 @@ module.exports = (sequelize) => {
       as: 'usuario',
       foreignKey: 'usuarioId'
     });
-
     abrigo.hasMany(models.contato_abrigoModel, {
       as: 'contatos',
       foreignKey: 'abrigoId'

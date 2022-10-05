@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar abrigos</title>
-    <!-- <script type="module" defer src="/js/validadores.js"></script> -->
     <link rel="stylesheet" href="/css/cadastro.css">
 </head>
 
@@ -14,32 +13,31 @@
     <%-include('./partials/header')%>
         <main>
             <h2>Cadastro</h2>
-            <% if(typeof erros !== 'undefined'){ %> 
-            <ul>
-                <% for (let erro in erros) {%>
-                    <li>
-                        <b><%= erro %>: </b>
-                        <b><%= erros[erro].msg %> </b>
-                    </li> 
-                    <% } %> 
-            </ul>
-            <% } %> 
             <form action="/login/cadastro" method="POST" enctype="multipart/form-data">
                 <div class="divpai">
                     <br></br>
                     <div class="divfilho">
                         <label for="email">Email:</label>
                         <input type="email" name="email" placeholder="  Ex: abrigo@gmail.com">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["email"].msg %> </b>
+                        <% } %> 
                     </div>
 
                     <div class="divfilho">
                         <label for="nome">Nome:</label>
                         <input type="text" name="nome" placeholder="">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["nome"].msg %> </b>
+                        <% } %>
                     </div>
 
                     <div class="divfilho">
                         <label for="sobrenome">Sobrenome:</label>
                         <input type="text" name="sobrenome" placeholder=" ">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["sobrenome"].msg %> </b>
+                        <% } %>
                     </div>
 
                     <div class="divfilho">
@@ -53,7 +51,7 @@
 
                     <div class="divfilho">
                         <label for="numero">Contato do abrigo:</label>
-                        <input type="number" name="contato" placeholder="  Ex:(xx)xxxxx-xxxx">
+                        <input type="number" name="contato" placeholder="  Ex:(xx)xxxxx-xxxx">                   
                     </div>
 
                     <div class="divfilho">
@@ -90,12 +88,15 @@
                     <div class="divfilho">
                         <label for="Nome do abrigo">Nome do abrigo:</label>
                         <input type="text" name="nomeAbrigo" placeholder="  Ex: Lar dos vira-latas">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["nomeAbrigo"].msg %> </b>
+                        <% } %>
                     </div>
 
 
                     <div class="divfilho">
                         <label for="email">Email do abrigo:</label>
-                        <input type="email" name="emailAbrigo" placeholder="  Ex: abrigo@gmail.com">
+                        <input type="email" name="emailAbrigo" placeholder="  Ex: abrigo@gmail.com">               
                     </div>
 
                     <div class="divfilho">
@@ -132,10 +133,16 @@
                     <div class="divfilho">
                         <label for="suafoto">Envie sua foto:</label>
                         <input type="file" name="suafoto" id="suafoto" accept="*/image">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["suafoto"].msg %> </b>
+                        <% } %>                        
                     </div>
                     <div class="divfilho">
                         <label for="sualogo">Envie sua logo:</label>
                         <input type="file" name="sualogo" id="sualogo" accept="*/image">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["suafoto"].msg %> </b>
+                        <% } %>
                     </div>
 
                     <div id="botao">

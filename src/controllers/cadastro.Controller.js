@@ -26,7 +26,7 @@ dadosSalvos: async (request, response) => {
       return response.render('cadastro', { erros: erros.mapped() });
     }
 
-    const {  nome, sobrenome, email, celular, fixo, senha, cep, cidade, rua, complemento, bairro, numero, nomeAbrigo, emailAbrigo, sobre, tipo, contato, facebook, instagram  } = request.body;
+    const {  nome, sobrenome, email, suafoto, sualogo, celular, fixo, senha, cep, cidade, rua, complemento, bairro, numero, nomeAbrigo, emailAbrigo, sobre, tipo, contato, facebook, instagram  } = request.body;
 
     try {
       const novoUsuario =  usuarioModel.create({
@@ -35,6 +35,7 @@ dadosSalvos: async (request, response) => {
         email,
         celular,
         fixo,
+        suafoto,
         senha: bcrypt.hashSync(senha, salt),
       });
       const novoEndereco =  enderecoModel.create({
@@ -46,13 +47,14 @@ dadosSalvos: async (request, response) => {
         numero
        
       });
-
+      console.log(request.files);
       const [usuario, endereco] = await Promise.all([novoUsuario, novoEndereco]) 
 
       const novoAbrigo = await abrigoModel.create({
         usuarioId: usuario.id,
         nomeAbrigo,
         emailAbrigo,
+        sualogo,
         enderecoId: endereco.id,
         sobre
       })
