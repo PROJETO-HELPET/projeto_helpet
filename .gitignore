@@ -1,2 +1,6 @@
 node_modules
 .env
+/public/foto/*
+!/public/foto/.gitkeep
+/public/profile/*
+!/public/profile/.gitkeep

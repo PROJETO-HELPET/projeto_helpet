@@ -22,7 +22,6 @@ dadosSalvos: async (request, response) => {
     const erros = validationResult(request);
 
     if(!erros.isEmpty()){
-      console.log(erros.mapped())
       return response.render('cadastro', { erros: erros.mapped() });
     }
 
@@ -35,7 +34,7 @@ dadosSalvos: async (request, response) => {
         email,
         celular,
         fixo,
-        suafoto,
+        suafoto:request.files.suafoto[0].filename,
         senha: bcrypt.hashSync(senha, salt),
       });
       const novoEndereco =  enderecoModel.create({
@@ -54,7 +53,7 @@ dadosSalvos: async (request, response) => {
         usuarioId: usuario.id,
         nomeAbrigo,
         emailAbrigo,
-        sualogo,
+        sualogo:request.files.sualogo[0].filename,
         enderecoId: endereco.id,
         sobre
       })

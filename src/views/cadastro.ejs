@@ -96,7 +96,10 @@
 
                     <div class="divfilho">
                         <label for="email">Email do abrigo:</label>
-                        <input type="email" name="emailAbrigo" placeholder="  Ex: abrigo@gmail.com">               
+                        <input type="email" name="emailAbrigo" placeholder="  Ex: abrigo@gmail.com">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["emailAbrigo"].msg %> </b>
+                        <% } %>               
                     </div>
 
                     <div class="divfilho">
@@ -118,11 +121,17 @@
                     <div class="divfilho">
                         <label for="senha">Senha:</label>
                         <input type="password" name="senha" placeholder="  Ex: abrigo123">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["senha"].msg %> </b>
+                        <% } %>
                     </div>
 
                     <div class="divfilho">
                         <label for="senha">Confirme sua senha:</label>
                         <input type="password" name="confirmarSenha" placeholder="  Ex: abrigo123">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["confirmarSenha"].msg %> </b>
+                        <% } %>
                     </div>
                     <div>
                         <label for="sobre">Fale sobre você:</label>
@@ -132,17 +141,11 @@
 
                     <div class="divfilho">
                         <label for="suafoto">Envie sua foto:</label>
-                        <input type="file" name="suafoto" id="suafoto" accept="*/image">
-                        <% if(typeof erros !== 'undefined'){ %>
-                            <b><%= erros["suafoto"].msg %> </b>
-                        <% } %>                        
+                        <input type="file" name="suafoto" id="suafoto" accept="*/image">                    
                     </div>
                     <div class="divfilho">
                         <label for="sualogo">Envie sua logo:</label>
                         <input type="file" name="sualogo" id="sualogo" accept="*/image">
-                        <% if(typeof erros !== 'undefined'){ %>
-                            <b><%= erros["suafoto"].msg %> </b>
-                        <% } %>
                     </div>
 
                     <div id="botao">
