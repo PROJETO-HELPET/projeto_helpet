@@ -9,11 +9,102 @@ body{
     /* font-family: 'Mali', cursive; */
     
 }
-.sobre-abrigos{
+
+
+.infos{
+    margin:10px;
+    display:flex;
+    justify-content:center;
+    margin-top: 40px;
+}
+
+
+.content{
+    height: 300px;
+    width: 500px;
+    border-radius: 30px;
+    overflow:hidden;
+    position:absolute;
+    margin-left: 10px;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    transform: translate(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.bar{
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.bar:hover{
+    background-color: #fff;
+}
+
+input{
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width:500% ;
+    height: 100%;
+
+}
+
+.slide{
+    width: 20%;
+    transition: .6s;
+}
+
+
+.slides img{
+    width: 100%;
+    height: 100%;
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+
+#slide5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+.sobre-abrigos{
+    display:flex;
+    justify-content:left;
+    margin-bottom: 10%;
+   
+
+}
+
 .info-abrigos{  
     margin: 30px;
     padding: 20px;
@@ -21,13 +112,12 @@ body{
     width: 350px;
     height: 200px;
     background-color: #f27127;
+    margin-left: 80%;
     border-radius: 10%;
     flex-wrap: wrap;
 }
-.foto-sobre-abrigos{
-    border-radius: 10%;
-    margin: 25px
-}
+
+
 .cards-abrigos{
     display:flex;
     justify-content: center;
@@ -38,9 +128,11 @@ body{
     padding-top: 30px;
     padding-bottom: 30px;
     margin-left: 30px;
-    margin: 40px;
+    margin: 10px;
     border-radius: 10%;
-    
+    margin-bottom: 35px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    opacity: 90%;
 }
 .logo-abrigo{
     text-align: center;      
