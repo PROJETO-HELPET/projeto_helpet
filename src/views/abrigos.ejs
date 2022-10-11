@@ -1,85 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon_helpet.ico" type="image/x-icon">
-    <title>Helpet</title>
-    
-    <link rel="stylesheet" href="/css/abrigos.css">
-</head>
-<body>
-<%-include('./partials/header')%> 
-<div class="encontre">
-    <h1>
-        Localize os abrigos parceiros
-    </h1>
-</div>
-    <main>
-        <section>
-           
-      
 
-            <div class="mapa" >
+    <link rel="stylesheet" href="/css/abrigos.css">
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCfV7NIGiDkUzcFOtacPnDD7WSnVKVrxc&callback=initMap">
+</script>
+    <script type="module" defer src="/js/geolocalizacao2.js"></script>
+
+    <title>Helpet</title>
+</head>
+
+<body>
+    <%-include('./partials/header')%>
+        <div class="encontre">
+            <h1>
+                Localize os abrigos parceiros
+            </h1>
+        </div>
+        <main>
+            <section>
+
+                <div id="map">
+
+                </div>
+
+
+                <!--   <div class="mapa" >
                 <p>
 
                     <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58535.19777225378!2d-46.70645758586156!3d-23.516317039697807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sabrigo%20de%20animal!5e0!3m2!1sen!2sbr!4v1655577102773!5m2!1sen!2sbr" width="800px" height="480px" style="border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
                 </p>
-            </div>   
+            </div>   -->
 
-            <div id ="abrigos-box" >
-                <ul>
-                    <div class = "custom-select" style="width: 400px">
-                        <div class = 'regioes'>
-                            <h2>Regiões</h2>
+                <div id="abrigos-box">
+                    <ul>
+                        <div class="custom-select" style="width: 400px">
+                            <div class='regioes'>
+                                <h2>Regiões</h2>
 
 
+                            </div>
+                            <li>
+                                <label for="regiao">Zona Sul</label>
+                                <select name="abrigos" id="abrigos">
+                                    <option value="0">Selecione o abrigo:</option>
+                                    <option value="1" src="">Abrigo 1</option>
+                                    <option value="2">Abrigo 2</option>
+                                    <option value="3">Abrigo 3</option>
+                                </select>
+                            </li>
+                            <li> <label for="regiao" q>Zona Oeste</label>
+                                <select name="abrigos" id="abrigos">
+                                    <option value="0">Selecione o abrigo:</option>
+                                    <option value="1">Abrigo 1</option>
+                                    <option value="2">Abrigo 2</option>
+                                    <option value="3">Abrigo 3</option>
+                                </select>
+                            </li>
+                            <li> <label for="regiao">Zona Leste</label>
+                                <select name="abrigos" id="abrigos">
+                                    <option value="0">Selecione o abrigo:</option>
+                                    <option value="1">Abrigo 1</option>
+                                    <option value="2">Abrigo 2</option>
+                                    <option value="3">Abrigo 3</option>
+                                </select>
+                            </li>
+                            <li> <label for="regiao">Zona Norte</label>
+                                <select name="abrigos" id="abrigos">
+                                    <option value="0">Selecione o abrigo:</option>
+                                    <option value="1">Abrigo 1</option>
+                                    <option value="2">Abrigo 2</option>
+                                    <option value="3">Abrigo 3</option>
+                                </select>
+                            </li>
+                            <li> <label for="regiao">Grande SP/ABC</label>
+                                <select name="abrigos" id="abrigos">
+                                    <option value="0">Selecione o abrigo:</option>
+                                    <option value="1">Abrigo 1</option>
+                                    <option value="2">Abrigo 2</option>
+                                    <option value="3">Abrigo 3</option>
+                                </select>
+                            </li>
                         </div>
-                        <li> 
-                            <label for="regiao">Zona Sul</label>
-                            <select name="abrigos" id="abrigos">
-                                <option value="0">Selecione o abrigo:</option>
-                                <option value="1" src ="">Abrigo 1</option>
-                                <option value="2">Abrigo 2</option>
-                                <option value="3">Abrigo 3</option>
-                        </select></li>
-                        <li>  <label for="regiao" q>Zona Oeste</label>
-                            <select name="abrigos" id="abrigos">
-                                <option value="0">Selecione o abrigo:</option>
-                                <option value="1">Abrigo 1</option>
-                                <option value="2">Abrigo 2</option>
-                                <option value="3">Abrigo 3</option>
-                        </select></li>
-                        <li>  <label for="regiao">Zona Leste</label>
-                            <select name="abrigos" id="abrigos">
-                                <option value="0">Selecione o abrigo:</option>
-                                <option value="1">Abrigo 1</option>
-                                <option value="2">Abrigo 2</option>
-                                <option value="3">Abrigo 3</option>
-                        </select></li>
-                        <li> <label for="regiao">Zona Norte</label>
-                            <select name="abrigos" id="abrigos">
-                                <option value="0">Selecione o abrigo:</option>
-                                <option value="1">Abrigo 1</option>
-                                <option value="2">Abrigo 2</option>
-                                <option value="3">Abrigo 3</option>
-                        </select></li>
-                        <li> <label for="regiao">Grande SP/ABC</label>
-                            <select name="abrigos" id="abrigos">
-                                <option value="0">Selecione o abrigo:</option>
-                                <option value="1">Abrigo 1</option>
-                                <option value="2">Abrigo 2</option>
-                                <option value="3">Abrigo 3</option>
-                        </select></li>
-                    </div>
-            
-                </ul>
-        
-            </div>
-   
-        </section>
-    </main>
-    <%-include('./partials/footer')%> 
+
+                    </ul>
+
+                </div>
+
+            </section>
+        </main>
+        <%-include('./partials/footer')%>
 </body>
+
 </html>
