@@ -166,7 +166,19 @@ label{
     display: flex;
     justify-content: center;
 }
-button{
+button#botaocadastre{
+    border: black 2px;
+    border-style: groove;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: white;
+    width: 120px;
+    margin-top: 10px;
+    border-radius: 40px;
+    font-size: 18px;
+    background-color:rgb(40, 119, 47);    
+}
+button#botaologin{
     border: black 2px;
     border-style: groove;
     cursor: pointer;
@@ -180,9 +192,8 @@ button{
     
     
 }
-button:hover{
+button#botaologin:hover{
     background-color: rgb(0, 140, 255);
-        
 }
 
 h1{
