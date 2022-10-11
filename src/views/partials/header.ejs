@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script  type="module" defer src="/js/menu.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    
     <link rel="stylesheet" href="/css/headerFooter.css">
 </head>
 <body>
@@ -61,7 +65,125 @@
                         Fale conosco
                     </a>
                 </li>
-                <!-- <img src="/profile/" alt=""> -->
+                <button id="btAbrirModal" class="modal:open">Foto user</button>
+                <div id="modal" class="hide">
+                    <div class="modal-bg"></div>
+                    <div class="modal-content">
+                        <div class="formulario-modal">
+                            <div class="div-form">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome">
+                            </div>
+
+                            <div class="div-form">
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input type="text" name="sobrenome">
+                            </div>
+
+                            <div class="div-form">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email">
+                            </div>     
+            
+                            <div class="div-form">
+                                <label for="numero">Telefone:</label>
+                                <input type="number" name="fixo">
+                            </div>
+
+                            <div class="div-form">
+                                <label for="celular">Celular:</label>
+                                <input type="number" name="celular">
+                            </div>
+
+                            <div class="div-form">
+                                <label for="Nome do abrigo">Nome do abrigo:</label>
+                                <input type="text" name="nomeAbrigo">
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="numero">Contato do abrigo:</label>
+                                <input type="number" name="contato" >                   
+                            </div>
+
+                            <div class="div-form">
+                                <label for="email">Email do abrigo:</label>
+                                <input type="email" name="emailAbrigo" >              
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="cep">CEP:</label>
+                                <input type="number" name="cep" >
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" name="cidade" >
+                            </div>
+            
+            
+                            <div class="div-form">
+                                <label for="rua">Rua:</label>
+                                <input type="text" name="rua" >
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="bairro">Bairro:</label>
+                                <input type="text" name="bairro" >
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="numero">Número:</label>
+                                <input type="number" name="numero" >
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="complemento">Complemento:</label>
+                                <input type="text" name="complemento" >
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="Instagram">Instagram:</label>
+                                <input type="text" name="instagram" >
+                            </div>
+            
+            
+                            <div class="div-form">
+                                <label for="Facebook">Facebook:</label>
+                                <input type="text" name="facebook" >
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="Whatsapp">Whatsapp:</label>
+                                <input type="text" name="whatsapp" >
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="senha">Senha:</label>
+                                <input type="password" name="senha" >
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="senha">Confirme sua senha:</label>
+                                <input type="password" name="confirmarSenha">
+                            </div>
+
+                            <div class="div-form">
+                                <label for="sobre">Fale sobre você:</label>
+                                <textarea name="sobre" id="sobre" cols="10" rows="10"></textarea>
+                            </div>
+            
+                            <div class="div-form">
+                                <label for="suafoto">Envie sua foto:</label>
+                                <input type="file" name="suafoto" id="suafoto" accept="*/image">                 
+                            </div>
+                            <div class="div-form">
+                                <label for="sualogo">Envie sua logo:</label>
+                                <input type="file" name="sualogo" id="sualogo" accept="*/image">
+                            </div>
+                        </div>      
+                        <a class="modal-close">&#215;</a>
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>

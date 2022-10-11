@@ -21,3 +21,21 @@ function toggleMenu(event){
 btnMobile.addEventListener('click', toggleMenu);
 
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+
+const btAbrirModal = $("#btAbrirModal");
+const modal = $("#modal");
+const modalClose = $("#modal .modal-close");
+const modalBackground = $("#modal .modal-bg");
+
+btAbrirModal.click(function () {
+    modal.fadeIn(500);
+});
+
+modalClose.click(function () {
+    modal.fadeOut(500);
+});
+
+modalBackground.click(function () {
+    modal.fadeOut(500);
+});

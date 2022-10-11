@@ -1,13 +1,31 @@
-const helpetRoutes = require('../routes/login.routes')
+const bcrypt = require("bcrypt");
+const {usuarioModel} = require('../database/');
 
 const loginController = {
 
 
-/* login  */
-login: (request, response) => {
-    response.render('login')
-},
 
+login: async (request, response) => {
+    const { email, senha } = request.body;
 
-}
+    const usuarioEncontrado = await usuarioModel.findOne({ where: { email } });
+
+    if (!usuarioEncontrado) {
+        return response.status(401).render('login', {
+            error: 'Usuario ou senha incorreto'
+        });
+    }
+
+    const ehSenhaCorreta = bcrypt.compareSync(senha, usuarioEncontrado.password);
+
+    if(!ehSenhaCorreta){
+    return response.status(401).render('login', {
+        error: 'Usuario ou senha incorreto'
+        });
+    }
+    request.session.ehAutorizado = true
+    request.session.fotoUsuario = usuarioEncontrado.suafoto
+    return response.render('home');
+}}
+
 module.exports = loginController;
