@@ -20,7 +20,7 @@ viewForm: (request, response) => {
 },
 dadosSalvos: async (request, response) => {
     const erros = validationResult(request);
-
+    console.log(erros.mapped())
     if(!erros.isEmpty()){
       return response.render('cadastro', { erros: erros.mapped() });
     }

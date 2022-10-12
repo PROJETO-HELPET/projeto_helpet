@@ -20,7 +20,7 @@
                     <div class="divfilho">
                         <label for="nome">Nome:</label>
                         <input type="text" name="nome" placeholder="">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.nome ){ %>
                             <b><%= erros["nome"].msg %> </b>
                         <% } %>
                     </div>
@@ -44,10 +44,17 @@
                     <div class="divfilho">
                         <label for="numero">Telefone:</label>
                         <input type="number" name="fixo" placeholder="  Somente numeros">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["fixo"].msg %> </b>
+                        <% } %>
                     </div>
+
                     <div class="divfilho">
                         <label for="celular">Celular:</label>
                         <input type="number" name="celular" placeholder="  Somente numeros">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["celular"].msg %> </b>
+                        <% } %>
                     </div>
 
                     <div class="divfilho">
@@ -74,17 +81,26 @@
                     <div class="divfilho">
                         <label for="cep">CEP:</label>
                         <input type="number" name="cep" placeholder="Somente numeros">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["cep"].msg %> </b>
+                        <% } %>
                     </div>
 
                     <div class="divfilho">
                         <label for="cidade">Cidade:</label>
                         <input type="text" name="cidade" placeholder="">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["cidade"].msg %> </b>
+                        <% } %>
                     </div>
 
 
                     <div class="divfilho">
                         <label for="rua">Rua:</label>
                         <input type="text" name="rua" placeholder="">
+                        <% if(typeof erros !== 'undefined'){ %>
+                            <b><%= erros["rua"].msg %> </b>
+                        <% } %>
                     </div>
 
                     <div class="divfilho">
