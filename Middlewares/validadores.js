@@ -15,7 +15,13 @@ module.exports = [
     check('cidade').notEmpty().withMessage('É necessário informar a cidade').trim(),
     check('rua').notEmpty().withMessage('É necessário informar a rua').trim(),
     check('senha').notEmpty().withMessage('A senha precisa ter mais de 6 caracteres').isLength({ min: 6 }).trim(),
-    check('confirmarSenha').notEmpty().withMessage('A senha precisa ter mais de 6 caracteres').isLength({ min: 6 }).trim(),
+    check('confirmarSenha').notEmpty().withMessage('A senha precisa ter mais de 6 caracteres').trim().isLength({min: 6})
+    .custom(async (confirmarSenha, {req}) => {
+        const senha = req.body.senha
+        if(senha !== confirmarSenha){
+            throw new Error('A senha deve ser mesma!')
+          }
+        }),
     check('suafoto').custom((value, { req })=> {
         console.log(req.files);
         const file = req.files.suafoto[0]
