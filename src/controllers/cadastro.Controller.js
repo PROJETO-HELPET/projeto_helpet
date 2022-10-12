@@ -46,7 +46,7 @@ dadosSalvos: async (request, response) => {
         numero
        
       });
-      console.log(request.files);
+      
       const [usuario, endereco] = await Promise.all([novoUsuario, novoEndereco]) 
 
       const novoAbrigo = await abrigoModel.create({

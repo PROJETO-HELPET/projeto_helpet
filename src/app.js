@@ -20,12 +20,11 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 /* app.use(session ({
-        secret:'helpet',
+        secret:'viraLata',
         resave:true,
         saveUninitialized: true,
 }));
 app.use(cookieParser); */
-
 app.use('/', helpetRoutes);
 app.use('/abrigos', abrigosRoutes)
 app.use('/abrigosParceiros', abrigosParceirosRoutes);

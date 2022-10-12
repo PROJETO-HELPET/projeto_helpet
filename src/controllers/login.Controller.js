@@ -8,21 +8,23 @@ const loginController = {
 
         const usuarioEncontrado = await usuarioModel.findOne({ where: { email } });
 
+        console.log(usuarioEncontrado)
+
         if (!usuarioEncontrado) {
             return response.status(401).render('login', {
                 error: 'Usuario ou senha incorreto'
             });
         }
 
-        const ehSenhaCorreta = bcrypt.compareSync(senha, usuarioEncontrado.password);
+        const ehSenhaCorreta = bcrypt.compareSync(senha, usuarioEncontrado.senha);
 
         if(!ehSenhaCorreta){
             return response.status(401).render('login', {
                 error: 'Usuario ou senha incorreto'
             });
         }
-        request.session.ehAutorizado = true
-        request.session.fotoUsuario = usuarioEncontrado.suafoto
+        /* request.session.isAuthorized = true 
+        request.session.fotoUsuario = usuarioEncontrado.suafoto */
         return response.render('home');
     },
     getlogin: (request, response) => {
