@@ -9,6 +9,7 @@
 </head>
     <body> <!-- section sobre os abrigos-->
         <%-include('./partials/header')%> 
+        <main class="infos">
         <section class="sobre-abrigos">
             <div class="info-abrigos">                  
                 <h1>Nossos abrigos parceiros</h1>
@@ -17,13 +18,49 @@
                     informações sobre localização, sites, redes sociais e 
                     como ajudar o abrigo.</p>
             </div>
-            <div class="foto-sobre-abrigos">
-                <img class="foto-sobre-abrigos" src="/img/cachorrograde.jpeg" alt="Foto de um cachorrinho pequeno atrás de uma grande.">
+        
+            <!--<div class="foto-sobre-abrigos">!-->
+                <!--<img class="foto-sobre-abrigos" src="/img/cachorrograde.jpeg" alt="Foto de um cachorrinho pequeno atrás de uma grande.">-->
+        
+            <div class="content">
+
+                <div class="slides">
+                <input type="radio" name="slide" id="slide1">
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <input type="radio" name="slide" id="slide4">
+                <input type="radio" name="slide" id="slide5">
+                
+                <div class="slide s1">
+                    <img src="/img/foto1.jpeg" alt="cachorrinho olhando através de grade">
+                </div>
+                <div class="slide">
+                    <img src="/img/foto2.jpg" alt="cachorros deitados dentro de casinhas de madeira">
+                </div>
+                <div class="slide">
+                    <img src="/img/foto3.jpg" alt="filhote com a cara na grade">
+                </div>
+                <div class="slide">
+                    <img src="/img/foto4.jpg" alt="cachorro com cara de triste atras de grade">
+                </div>
+                <div class="slide">
+                    <img src="/img/foto5.jpg" alt="cachorro feliz recebendo carinho de uma mulher">
+                </div>
+
+                <div class="navigation">
+                    <label class="bar" for="slide1"></label>
+                    <label class="bar" for="slide2"></label>
+                    <label class="bar" for="slide3"></label>
+                    <label class="bar" for="slide4"></label>
+                    <label class="bar" for="slide5"></label>
+                </div>
+
+                </div>      
             </div>
-
-        </section>  <!-- section contendo divs sobre os abrigos-->   
-
-        <section class="Abrigos-parceiros">
+            
+        </section> 
+        </main>
+        <section class="Abrigos-parceiros">  <!-- section contendo divs sobre os abrigos-->   
             <div class="cards-abrigos">  
                 <div class="card">
                     <div class="logo-abrigo">
