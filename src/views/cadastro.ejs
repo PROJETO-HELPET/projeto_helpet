@@ -28,7 +28,7 @@
                     <div class="divfilho">
                         <label for="sobrenome">Sobrenome:</label>
                         <input type="text" name="sobrenome" placeholder=" ">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.sobrenome){ %>
                             <b><%= erros["sobrenome"].msg %> </b>
                         <% } %>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="divfilho">
                         <label for="email">Email:</label>
                         <input type="email" name="email" placeholder="  Ex: abrigo@gmail.com">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.email){ %>
                             <b><%= erros["email"].msg %> </b>
                         <% } %> 
                     </div>         
@@ -44,7 +44,7 @@
                     <div class="divfilho">
                         <label for="numero">Telefone:</label>
                         <input type="number" name="fixo" placeholder="  Somente numeros">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.fixo){ %>
                             <b><%= erros["fixo"].msg %> </b>
                         <% } %>
                     </div>
@@ -52,7 +52,7 @@
                     <div class="divfilho">
                         <label for="celular">Celular:</label>
                         <input type="number" name="celular" placeholder="  Somente numeros">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined'&& erros.celular){ %>
                             <b><%= erros["celular"].msg %> </b>
                         <% } %>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="divfilho">
                         <label for="Nome do abrigo">Nome do abrigo:</label>
                         <input type="text" name="nomeAbrigo" placeholder="">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.nomeAbrigo){ %>
                             <b><%= erros["nomeAbrigo"].msg %> </b>
                         <% } %>
                     </div>
@@ -73,7 +73,7 @@
                     <div class="divfilho">
                         <label for="email">Email do abrigo:</label>
                         <input type="email" name="emailAbrigo" placeholder="  Ex: abrigo@gmail.com">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined'&& erros.emailAbrigo){ %>
                             <b><%= erros["emailAbrigo"].msg %> </b>
                         <% } %>               
                     </div>
@@ -81,7 +81,7 @@
                     <div class="divfilho">
                         <label for="cep">CEP:</label>
                         <input type="number" name="cep" placeholder="Somente numeros">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.cep){ %>
                             <b><%= erros["cep"].msg %> </b>
                         <% } %>
                     </div>
@@ -89,7 +89,7 @@
                     <div class="divfilho">
                         <label for="cidade">Cidade:</label>
                         <input type="text" name="cidade" placeholder="">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.cidade){ %>
                             <b><%= erros["cidade"].msg %> </b>
                         <% } %>
                     </div>
@@ -98,7 +98,7 @@
                     <div class="divfilho">
                         <label for="rua">Rua:</label>
                         <input type="text" name="rua" placeholder="">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.rua){ %>
                             <b><%= erros["rua"].msg %> </b>
                         <% } %>
                     </div>
@@ -137,7 +137,7 @@
                     <div class="divfilho">
                         <label for="senha">Senha:</label>
                         <input type="password" name="senha" placeholder="Senha">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.senha){ %>
                             <b><%= erros["senha"].msg %> </b>
                         <% } %>
                     </div>
@@ -145,7 +145,7 @@
                     <div class="divfilho">
                         <label for="senha">Confirme sua senha:</label>
                         <input type="password" name="confirmarSenha" placeholder="">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.confirmarSenha){ %>
                             <b><%= erros["confirmarSenha"].msg %> </b>
                         <% } %>
                     </div>
@@ -158,14 +158,14 @@
                     <div class="divfilho">
                         <label for="suafoto">Foto do perfil:</label>
                         <input type="file" name="suafoto" id="suafoto" accept="*/image">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.suafoto){ %>
                             <b><%= erros["suafoto"].msg %> </b>
                         <% } %>                    
                     </div>
                     <div class="divfilho">
                         <label for="sualogo">Logo abrigo:</label>
                         <input type="file" name="sualogo" id="sualogo" accept="*/image">
-                        <% if(typeof erros !== 'undefined'){ %>
+                        <% if(typeof erros !== 'undefined' && erros.sualogo){ %>
                             <b><%= erros["sualogo"].msg %> </b>
                         <% } %>
                     </div>
