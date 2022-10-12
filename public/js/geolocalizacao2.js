@@ -1,28 +1,23 @@
-/* function sucess(position) {
+function success(position) {
     console.log(position.coords.latitude, position.coords.longitude)
     let meuLocal = {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
     }
-} 
-let watchID = navigator.geolocation.watchPosition(sucess) */
-
-function initMap() {
-    const uluru = { lat: -25.344, lng: 131.031 };
-   
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
-      center: uluru,
+      zoom: 15,
+      center: meuLocal,
     });
-   
     const marker = new google.maps.Marker({
-      position: uluru,
+      position: meuLocal,
       map: map,
     });
+} 
+
+function initMap() {
+  
+  let watchID = navigator.geolocation.watchPosition(success)
+  
 }
 
-
 window.initMap = initMap;
-
-
- 
