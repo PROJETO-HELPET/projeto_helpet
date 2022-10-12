@@ -12,10 +12,10 @@ body{
 
 
 .infos{
-    margin:10px;
-    display:flex;
-    justify-content:center;
-    margin-top: 40px;
+    margin :10px;
+    display :flex;
+    justify-content :center;
+    margin-top : 40px;
 }
 
 
@@ -24,21 +24,19 @@ body{
     width: 500px;
     border-radius: 30px;
     overflow:hidden;
-    position:absolute;
-    margin-left: 10px;
-    top: 40%;
-    transform: translate(-50%,-50%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    position :absolute;
+    margin-left : 10px;
+    top : 40%;
+    transform : translate(-50%,-50%);
+    box-shadow : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .navigation{
-    position: absolute;
-    bottom: 20px;
-    left:50%;
-    transform: translate(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position : absolute;
+    bottom : 20px;
+    left :50%;
+    transform : translate(-50%);
+    display : flex;
 }
 
 .bar{
@@ -98,23 +96,28 @@ input{
 }
 
 .sobre-abrigos{
-    display:flex;
-    justify-content:left;
-    margin-bottom: 10%;
+    display :flex;
+    justify-content :left;
+    margin-bottom : 10%;
    
 
 }
 
 .info-abrigos{  
-    margin: 30px;
-    padding: 20px;
-    display:flex;
-    width: 350px;
-    height: 200px;
-    background-color: #f27127;
-    margin-left: 80%;
-    border-radius: 10%;
-    flex-wrap: wrap;
+    margin : 35px;
+    padding : 30px;
+    display : inline-flex; 
+    width : 350px;
+    height : 200px;
+    flex-direction :column;
+    flex :none;
+    text-align : center;
+    align-items : baseline;
+    background :#f27127;
+    margin-left : 80%;
+    border-radius : 10%;
+    box-shadow : rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    opacity : 90%;
 }
 
 
