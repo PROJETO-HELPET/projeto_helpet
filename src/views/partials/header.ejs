@@ -65,7 +65,11 @@
                         Fale conosco
                     </a>
                 </li>
-                <button id="btAbrirModal" class="modal:open">Foto user</button>
+                <button id="btAbrirModal" class="modal:open">
+                    <% if(locals.usuario) { %> 
+                        <img src="./foto/<%= locals.usuario.foto %> " alt="">
+                    <% }%> 
+                </button>
                 <div id="modal" class="hide">
                     <div class="modal-bg"></div>
                     <div class="modal-content">

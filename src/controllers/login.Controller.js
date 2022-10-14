@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const {usuarioModel} = require('../database/');
+const { usuarioModel } = require('../database/');
 
 const loginController = {
 
@@ -18,13 +18,16 @@ const loginController = {
 
         const ehSenhaCorreta = bcrypt.compareSync(senha, usuarioEncontrado.senha);
 
-        if(!ehSenhaCorreta){
+        if (!ehSenhaCorreta) {
             return response.status(401).render('login', {
                 error: 'Usuario ou senha incorreto'
             });
         }
-        /* request.session.isAuthorized = true 
-        request.session.fotoUsuario = usuarioEncontrado.suafoto */
+        request.session.isAuthorized = true
+        request.session.usuario = {
+            foto: usuarioEncontrado.suafoto
+        }
+
         return response.render('home');
     },
     getlogin: (request, response) => {
