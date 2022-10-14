@@ -27,10 +27,13 @@
 
                     <div class="divfilho">
                         <label for="sobrenome">Sobrenome:</label>
-                        <input type="text" name="sobrenome" placeholder=" " value="<%= usuario.nome %>">
+                        <input type="text" name="sobrenome" placeholder=" " 
+                        <% if(usuario){ %>
+                        value="<%= usuario.nome %>"
+                        <% } %>
                         <% if(typeof erros !== 'undefined' && erros.sobrenome){ %>
                             <b><%= erros["sobrenome"].msg %> </b>
-                        <% } %>
+                        <% } %>>
                     </div>
 
                     <div class="divfilho">
