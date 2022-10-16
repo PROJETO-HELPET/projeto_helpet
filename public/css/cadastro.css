@@ -73,6 +73,7 @@ input{
     min-height: 35px;
     min-width: 200px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
 }
 
 
@@ -100,6 +101,12 @@ button#enviar:hover{
 .imgbackground{
     width: 100%;
     height: 100%;
+}
+textarea{
+    padding: 15px;
+    font-size: medium;
+    line-height: 22px;
+    border-radius: 5px;
 }
 
 /* input[type="file"]{

@@ -12,10 +12,10 @@
 <body>
     <%-include('./partials/header')%>
         <main>
-            <form action="/usuario/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form action="/usuario/<%= usuario.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
                 <div class="divpai">
                     <br></br>
-
+                    <h1>Tem certeza que deseja deletar sua conta: <%= usuario.nome %>???</h1>
                     <div class="divfilho">
                         <label for="nome">Nome:</label>
                         <input type="text" name="nome" placeholder=""
@@ -197,17 +197,12 @@
                         
                     </div>
 
-                    <div id="botao">
-                        <button id="editar" type="submit">Editar</button>
+                    <div id="excluir">
+                        <button id="excluir" type="submit">Deletar</button>
                     </div>
                    
-                    <div id="delete">
-                        <a href="/usuario/delete/<%= locals.usuario.id %>">Deseja excluir sua conta?</a>
-                    </div>
                 </div>
             </form>
-
-            
         </main>
         <%-include('./partials/footer')%>
 </body>

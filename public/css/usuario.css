@@ -18,6 +18,7 @@ main {
     justify-content: center;
     align-items: flex-start;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
     
 }    
 
@@ -43,13 +44,14 @@ main {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
     
 }
 input{
     display: flex;
     max-height: 20px;
     max-width: 235px;
+    padding: 10px;
 
 }
 h2{
@@ -91,22 +93,40 @@ button#editar{
     font-size: 30px;
     background-color:rgb(244, 248, 0);
 }
-button#excluir{
+div#delete{
     border:black;
-    color: rgb(0, 0, 0);
     border-style: groove;
     box-sizing: border-box;
     margin: 0 auto;
     cursor: pointer;
-    padding: 3px;
-    width: 70%;
+    padding: 10px;
+    width: 20%;
     border-radius: 30px;
-    height: 30%;
+    height: 20%;
     margin-top: 100px;
-    font-size: 30px;
-    background-color:rgb(248, 0, 0);
-   
+    font-size: 20px;
+    background-color:rgba(224, 8, 8, 0.884);
 
+}
+div#delete a{
+    text-decoration: none;
+    color: black;
+
+}
+
+div#excluir button{
+    border:black;
+    border-style: groove;
+    box-sizing: border-box;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 10px;
+    width: 40%;
+    border-radius: 30px;
+    height: 40%;
+    margin-top: 100px;
+    font-size: 20px;
+    background-color:rgba(224, 8, 8, 0.884);
 }
 button#enviar:hover{
     background-color: rgb(0, 140, 255);
@@ -115,6 +135,13 @@ button#enviar:hover{
 .imgbackground{
     width: 100%;
     height: 100%;
+}
+
+textarea{
+    padding: 15px;
+    font-size: medium;
+    line-height: 22px;
+    border-radius: 5px;
 }
 
 /* input[type="file"]{

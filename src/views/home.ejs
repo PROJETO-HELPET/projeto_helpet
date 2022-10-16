@@ -10,7 +10,18 @@
 </head>
     <body>
         <header>
+
             <div><img src="/img/favicon_helpet.ico" alt="logotipo da empresa"></div>
+            
+            <% if(locals.usuario) { %>
+                <a href="/usuario/edit/<%= locals.usuario.id %>">                    
+                <button class="foto-usuario">
+                        <% if(locals.usuario) { %> 
+                            <img class="foto-usuario" src="./foto/<%= locals.usuario.foto %> " alt="">
+                        <% }%> 
+                </button>
+            </a>
+            <% }%>
             
         </header>
             
