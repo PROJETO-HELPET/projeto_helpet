@@ -262,3 +262,6 @@ footer div.img-logo img.pet{
     border-radius: 100%;
     cursor: pointer;
 }
+#botão-sair{
+   color: red;
+}

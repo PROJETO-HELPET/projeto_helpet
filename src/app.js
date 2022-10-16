@@ -10,7 +10,9 @@ const abrigosParceirosRoutes = require('./routes/abrigosParceiros.routes');
 const abrigosRoutes = require('./routes/abrigos.routes');
 const cadastroRoutes = require('./routes/cadastro.routes')
 const pagParceiroRoutes = require('./routes/pagParceiro.routes');
+const usuarioRoutes = require('./routes/usuario.routes');
 const obterFotoUsuario = require('./middlewares/obterFotoUsuario');
+const methodOverride = require("method-override");
 
 const app = express();
 
@@ -19,6 +21,7 @@ app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
+app.use(methodOverride("_method"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
@@ -37,6 +40,7 @@ app.use('/abrigosParceiros/pagParceiro', pagParceiroRoutes)
 app.use('/login', loginRoutes);
 app.use('/login/cadastro', cadastroRoutes);
 app.use('/faleConosco', faleConoscoRoutes);
+app.use('/usuario', usuarioRoutes);
 
 app.use((err, req, res, next) => {
     console.error(err);

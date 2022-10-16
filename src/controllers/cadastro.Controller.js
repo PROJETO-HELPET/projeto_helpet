@@ -1,9 +1,4 @@
-const helpetRoutes = require('../routes/cadastro.routes')
-const fs = require('fs')
-const path = require('path')
-const { json } = require('express')
 const { validationResult } = require('express-validator') 
-const listaAbrigos = path.join(__dirname,'..','data','cadastroDataBase.json')
 const bcrypt = require("bcrypt");
 const salt = bcrypt.genSaltSync(10)
 const {usuarioModel} = require('../database/');

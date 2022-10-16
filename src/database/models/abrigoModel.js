@@ -57,7 +57,7 @@ module.exports = (sequelize) => {
       as: 'sociais',
       foreignKey: 'abrigoId'
     });
-    abrigo.hasOne(models.enderecoModel, {
+    abrigo.belongsTo(models.enderecoModel, {
       as: 'endereco',
       foreignKey: 'enderecoId'
     })

@@ -25,7 +25,8 @@ const loginController = {
         }
         request.session.isAuthorized = true
         request.session.usuario = {
-            foto: usuarioEncontrado.suafoto
+            foto: usuarioEncontrado.suafoto,
+            id: usuarioEncontrado.id
         }
 
         return response.render('home');

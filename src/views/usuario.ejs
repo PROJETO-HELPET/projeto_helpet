@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar abrigos</title>
+    <link rel="stylesheet" href="/css/usuario.css">
+</head>
+
+<body>
+    <%-include('./partials/header')%>
+        <main>
+            <form action="/usuario/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="divpai">
+                    <br></br>
+
+                    <div class="divfilho">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.nome %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" name="sobrenome" placeholder=" " 
+                        <% if(usuario){ %>
+                        value="<%= usuario.sobrenome %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" placeholder="  Ex: abrigo@gmail.com"
+                        <% if(usuario){ %>
+                            value="<%= usuario.email %>"
+                        <% } %>>
+                    </div>         
+
+                    <div class="divfilho">
+                        <label for="numero">Telefone:</label>
+                        <input type="number" name="fixo" placeholder="  Somente numeros"
+                        <% if(usuario){ %>
+                            value="<%= usuario.fixo %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="celular">Celular:</label>
+                        <input type="number" name="celular" placeholder="  Somente numeros"
+                        <% if(usuario){ %>
+                            value="<%= usuario.celular %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="Nome do abrigo">Nome do abrigo:</label>
+                        <input type="text" name="nomeAbrigo" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].nomeAbrigo %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="numero">Contato do abrigo:</label>
+                        <input type="number" name="contato" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].contatos[0].contato %>"
+                        <% } %>>                   
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="email">Email do abrigo:</label>
+                        <input type="email" name="emailAbrigo" placeholder="  Ex: abrigo@gmail.com"
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].emailAbrigo %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="cep">CEP:</label>
+                        <input type="number" name="cep" placeholder="Somente numeros"
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].endereco.cep %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" name="cidade" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].endereco.cidade %>"
+                        <% } %>>
+                    </div>
+
+
+                    <div class="divfilho">
+                        <label for="rua">Rua:</label>
+                        <input type="text" name="rua" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].endereco.rua %>"
+                            <% } %>
+                            >
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" name="bairro" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].endereco.bairro %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="numero">Número:</label>
+                        <input type="number" name="numero" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].endereco.numero %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="complemento">Complemento:</label>
+                        <input type="text" name="complemento" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].endereco.complemento %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="Instagram">Instagram:</label>
+                        <input type="text" name="instagram" placeholder="Link do instagram"
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].sociais[0].instagram %>"
+                        <% } %>>
+                    </div>
+
+
+                    <div class="divfilho">
+                        <label for="Facebook">Facebook:</label>
+                        <input type="text" name="facebook" placeholder="Link do facebook"
+                        <% if(usuario){ %>
+                            value="<%= usuario.abrigos[0].sociais[0].facebook %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="Whatsapp">Whatsapp:</label>
+                        <input type="text" name="whatsapp" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.celular %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" placeholder="Senha"
+                        <% if(usuario){ %>
+                            value="<%= usuario.senha %>"
+                        <% } %>>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="senha">Confirme sua senha:</label>
+                        <input type="password" name="confirmarSenha" placeholder=""
+                        <% if(usuario){ %>
+                            value="<%= usuario.confirmarSenha %>"
+                        <% } %>>
+                    </div>
+                    <div>
+                        <label for="sobre">Sobre o abrigo:</label>
+                        <textarea name="sobre" id="sobre" cols="10" rows="10"
+                            placeholder="Ex: Data de criação do abrigo, estrutura do abrigo..."
+                            <% if(usuario){ %>
+                                value="<%= usuario.abrigos[0].sobre %>"
+                            <% } %>>
+                        </textarea>
+                    </div>
+
+                    <div class="divfilho">
+                        <label for="suafoto">Foto do perfil:</label>
+                        <input type="file" name="suafoto" id="suafoto" accept="*/image"
+                        <% if(usuario){ %>
+                            value="<%= usuario.suafoto %>"
+                        <% } %>>
+                                          
+                    </div>
+                    <div class="divfilho">
+                        <label for="sualogo">Logo abrigo:</label>
+                        <input type="file" name="sualogo" id="sualogo" accept="*/image"
+                        <% if(usuario){ %>
+                            value="<%= usuario.sualogo %>"
+                        <% } %>>
+                        
+                    </div>
+
+                    <div id="botao">
+                        <button id="editar" type="submit">Editar</button>
+                    </div>
+                    <div id="botao">
+                        <button id="excluir" type="submit">Exluir!</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <%-include('./partials/footer')%>
+</body>
+
+</html>
