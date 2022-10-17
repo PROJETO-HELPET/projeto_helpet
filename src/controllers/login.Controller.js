@@ -29,7 +29,7 @@ const loginController = {
             id: usuarioEncontrado.id
         }
 
-        return response.render('home');
+        return response.redirect('/');
     },
     getlogin: (request, response) => {
         response.render('login')

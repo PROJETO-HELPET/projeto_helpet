@@ -55,6 +55,7 @@ const usuarioController = {
         senha: bcrypt.hashSync(senha, salt),
       }, { where: {id}});
 
+
       const editarEndereco =  enderecoModel.update({
         cep,
         rua,
@@ -88,7 +89,7 @@ const usuarioController = {
         abrigoId: editarAbrigo.id
       }, { where: {id}})
       
-    response.redirect(`/usuario/${id}`);
+    response.redirect(`/`); 
   },
 
   deleteUsuarioTela:async (request, response) => {
@@ -122,6 +123,49 @@ const usuarioController = {
 
     // soft-delete
     await usuarioModel.destroy({ where: { id }, force: true });
+
+    const deleteUsuario =  usuarioModel.destroy({
+      nome,
+      sobrenome,
+      email,
+      celular,
+      fixo,
+      suafoto,
+      senha
+    }, { where: {id}, force: true });
+
+    const deleteEndereco =  enderecoModel.destroy({
+      cep,
+      rua,
+      complemento,
+      bairro,
+      cidade,
+      numero
+     
+    }, { where: {id}, force: true});
+    
+    const [usuario, endereco] = await Promise.all([deleteUsuario, deleteEndereco]) 
+
+    const deleteAbrigo = await abrigoModel.destroy({
+      usuarioId: usuario.id,
+      nomeAbrigo,
+      emailAbrigo,
+      sualogo,
+      enderecoId: endereco.id,
+      sobre
+    }, { where: {id}, force: true} )
+
+    const deleteContatos = await contato_abrigoModel.destroy({
+      tipo,
+      contato,
+      abrigoId: deleteAbrigo.id
+    }, { where: {id}, force: true})
+
+    const deleteSociais = await socialModel.destroy({
+      facebook,
+      instagram,
+      abrigoId: deleteAbrigo.id
+    }, { where: {id}, force: true})
 
     response.render("/");
   },
