@@ -117,50 +117,18 @@ const usuarioController = {
 
   delete: async (request, response) => {
     const { id } = request.params;
+    
+    await contato_abrigoModel.destroy({ where: {id}, force: true});
+    
+    await socialModel.destroy({ where: {id}, force: true});
 
-    const deleteUsuario =  await usuarioModel.destroy({
-      nome,
-      sobrenome,
-      email,
-      celular,
-      fixo,
-      suafoto,
-      senha
-    }, { where: {id}, force: true });
+    await abrigoModel.destroy({ where: {id}, force: true} );
+    
+    await usuarioModel.destroy({ where: {id}, force: true });
 
-    const deleteEndereco = await enderecoModel.destroy({
-      cep,
-      rua,
-      complemento,
-      bairro,
-      cidade,
-      numero
-     
-    }, { where: {id}, force: true});
-  
-
-    const deleteAbrigo = await abrigoModel.destroy({
-      usuarioId: usuario.id,
-      nomeAbrigo,
-      emailAbrigo,
-      sualogo,
-      enderecoId: endereco.id,
-      sobre
-    }, { where: {id}, force: true} )
-
-    const deleteContatos = await contato_abrigoModel.destroy({
-      tipo,
-      contato,
-      abrigoId: deleteAbrigo.id
-    }, { where: {id}, force: true})
-
-    const deleteSociais = await socialModel.destroy({
-      facebook,
-      instagram,
-      abrigoId: deleteAbrigo.id
-    }, { where: {id}, force: true})
-
-    response.render("/");
+    await enderecoModel.destroy({ where: {id}, force: true});
+    
+    response.redirect("/");
   },
 
   logout: (request, response) => {

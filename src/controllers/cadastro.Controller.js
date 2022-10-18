@@ -9,7 +9,6 @@ const {socialModel} = require('../database/');
 
 const cadastroController = {
 
-/* cadastro */
 viewForm: (request, response) => {
    return response.render('cadastro')
 },

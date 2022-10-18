@@ -1,13 +1,8 @@
 const abrigosParceirosController = {
 
-abrigosParceiros:  (request, response) => {
-
-
-    response.render('abrigosParceiros')
-},
-
-
-
+    abrigosParceiros:  (request, response) => {
+        response.render('abrigosParceiros')
+    },
 
 }
  
