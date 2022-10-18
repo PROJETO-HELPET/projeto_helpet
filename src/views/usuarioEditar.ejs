@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar abrigos</title>
     <link rel="stylesheet" href="/css/usuario.css">
+    <link rel="stylesheet" href="/css/headerFooter.css">
 </head>
 
 <body>
-    <%-include('./partials/header')%>
+    <%- include('./partials/header') %>
         <main>
             <form action="/usuario/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="divpai">
