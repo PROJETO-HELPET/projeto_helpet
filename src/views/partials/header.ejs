@@ -25,7 +25,6 @@
             </figure>
         
         </div>
-        
         <nav id="nav">
             <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"aria-expanded="false">
                 <span id="hamburger"></span>
@@ -55,7 +54,7 @@
                         Abrigos Parceiros
                     </a>
                 </li>
-                <% if(!locals.usuario) { %>
+                <% if(!usuario) { %>
                     <li>
                         <a href="/login">
                             Login
@@ -68,16 +67,16 @@
                         Fale conosco
                     </a>
                 </li>
-                <% if(locals.usuario) { %>
-                    <a href="/usuario/edit/<%= locals.usuario.id %>">                    
+                <% if(usuario) { %>
+                    <a href="/usuario/edit/<%= usuario.id %>">                    
                     <button class="foto-usuario">
-                            <% if(locals.usuario) { %> 
-                                <img class="foto-usuario" src="./foto/<%= locals.usuario.foto %> " alt="">
+                            <% if(usuario) { %> 
+                                <img class="foto-usuario" src="/foto/<%= usuario.suafoto %> " alt="">
                             <% }%> 
                     </button>
                 </a>
                 <% }%>
-                    <% if(locals.usuario) { %>
+                    <% if(usuario) { %>
                         <li >
                             <a id="botão-sair" href="/usuario/logout">
                                 Sair
