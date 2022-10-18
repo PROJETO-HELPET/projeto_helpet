@@ -5,7 +5,7 @@ function success(position) {
     lng: position.coords.longitude
   }
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
+    zoom: 9,
     center: meuLocal,
   });
   const marker = new google.maps.Marker({
@@ -21,6 +21,16 @@ function success(position) {
   const zoonoses = new google.maps.Marker({
     position: { lat: -23.509428898465824, lng: -46.11413593863215 },
     title: "CCZ",
+    map: map,
+  });
+  const acaochego = new google.maps.Marker({
+    position: { lat: -23.535057545463523, lng: -46.796374271164645 },
+    title: "Acãochego",
+    map: map,
+  });
+  const miadosELatidos = new google.maps.Marker({
+    position: { lat: -23.534634899150433, lng: -46.575874884656045 },
+    title: "Miados e Latidos",
     map: map,
   });
 }
