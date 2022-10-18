@@ -1,6 +1,4 @@
 const {usuarioModel, abrigoModel, enderecoModel, contato_abrigoModel, socialModel} = require('../database');
-const bcrypt = require("bcrypt");
-const salt = bcrypt.genSaltSync(10);
 
 const usuarioController = {
   usuario: (request, response) => {
@@ -29,7 +27,7 @@ const usuarioController = {
         }]
       }});
       /* console.log(usuario); */
-    response.render('usuario', { usuario })
+    response.render('usuarioEditar', { usuario })
 },
 
 /* editarUsuario: async (request, response) => {
@@ -41,7 +39,7 @@ const usuarioController = {
   }, */
 
   editar: async (request, response) => {
-    const {  nome, sobrenome, email, suafoto, sualogo, celular, fixo, senha, cep, cidade, rua, complemento, bairro, numero, nomeAbrigo, emailAbrigo, sobre, tipo, contato, facebook, instagram  } = request.body;
+    const {  nome, sobrenome, email, suafoto, sualogo, celular, fixo, cep, cidade, rua, complemento, bairro, numero, nomeAbrigo, emailAbrigo, sobre, tipo, contato, facebook, instagram  } = request.body;
 
     const { id } = request.params;
 
@@ -51,8 +49,7 @@ const usuarioController = {
         email,
         celular,
         fixo,
-        suafoto:request.files.suafoto[0].filename,
-        senha: bcrypt.hashSync(senha, salt),
+        suafoto:request.files.suafoto[0].filename
       }, { where: {id}});
 
 
@@ -115,16 +112,13 @@ const usuarioController = {
         }]
       }});
       console.log(usuario.id);
-    response.render('usuarioDelete', { usuario })
+    response.render('usuarioDeletar', { usuario })
 },
 
   delete: async (request, response) => {
     const { id } = request.params;
 
-    // soft-delete
-    await usuarioModel.destroy({ where: { id }, force: true });
-
-    const deleteUsuario =  usuarioModel.destroy({
+    const deleteUsuario =  await usuarioModel.destroy({
       nome,
       sobrenome,
       email,
@@ -134,7 +128,7 @@ const usuarioController = {
       senha
     }, { where: {id}, force: true });
 
-    const deleteEndereco =  enderecoModel.destroy({
+    const deleteEndereco = await enderecoModel.destroy({
       cep,
       rua,
       complemento,
@@ -143,8 +137,7 @@ const usuarioController = {
       numero
      
     }, { where: {id}, force: true});
-    
-    const [usuario, endereco] = await Promise.all([deleteUsuario, deleteEndereco]) 
+  
 
     const deleteAbrigo = await abrigoModel.destroy({
       usuarioId: usuario.id,

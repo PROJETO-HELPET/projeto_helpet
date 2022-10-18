@@ -23,7 +23,7 @@ const loginController = {
                 error: 'Usuario ou senha incorreto'
             });
         }
-        request.session.isAuthorized = true
+        request.session.ehAutorizado = true
         request.session.usuario = {
             foto: usuarioEncontrado.suafoto,
             id: usuarioEncontrado.id

@@ -1,7 +1,7 @@
-const isAuthorized = (request, response, next) => {
+const ehAutorizado = (request, response, next) => {
     try {
         
-        if(request.session.isAuthorized) {
+        if(request.session.ehAutorizado) {
             return next()
         }
     
@@ -11,4 +11,4 @@ const isAuthorized = (request, response, next) => {
     }
 }
 
-module.exports = isAuthorized;
+module.exports = ehAutorizado;

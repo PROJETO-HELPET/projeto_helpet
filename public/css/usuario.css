@@ -99,11 +99,10 @@ div#delete{
     box-sizing: border-box;
     margin: 0 auto;
     cursor: pointer;
-    padding: 10px;
-    width: 20%;
+    padding: 10px; 
     border-radius: 30px;
     height: 20%;
-    margin-top: 100px;
+    margin-top: 10px;
     font-size: 20px;
     background-color:rgba(224, 8, 8, 0.884);
 
@@ -111,6 +110,7 @@ div#delete{
 div#delete a{
     text-decoration: none;
     color: black;
+    
 
 }
 

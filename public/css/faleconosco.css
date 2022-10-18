@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +29,7 @@ body{
     text-align: center;
     color:rgba(214, 113, 25, 0.911);
     text-shadow: 3px 3px 5px  rgb(180, 148, 116);
-    font-family: Quicksand;
+    font-family:'Quicksand', sans-serif;;
     margin:3px 
     
 

@@ -1,10 +1,31 @@
-const helpetRoutes = require('../routes/pagParceiro.routes');
+const {usuarioModel, abrigoModel, enderecoModel, contato_abrigoModel, socialModel} = require('../database');
 
 const pagParceiroController = {
 
 
-pagParceiro: (request, response) => {
- response.render('pagParceiro')
+pagParceiro: async (request, response) => {
+    const id = 1
+    const abrigo = await usuarioModel.findByPk(1, {include: {
+        model: abrigoModel,
+        as: 'abrigos',
+        include: [{
+            model: enderecoModel,
+            as: 'endereco'
+
+          },
+          {
+            model: socialModel,
+            as: 'sociais'
+  
+          },
+          {
+          model: contato_abrigoModel,
+          as: 'contatos'  
+
+        }]
+      }});
+      
+    response.render('pagParceiro', { abrigo });
 },
 
 
