@@ -54,7 +54,8 @@
                         Abrigos Parceiros
                     </a>
                 </li>
-                <% if(!usuario) { %>
+
+                <% if(!usuario && !locals.usuario) { %>
                     <li>
                         <a href="/login">
                             Login
@@ -67,16 +68,20 @@
                         Fale conosco
                     </a>
                 </li>
-                <% if(usuario) { %>
+
+                <% if(usuario || locals.usuario) { %>
                     <a href="/usuario/edit/<%= usuario.id %>">                    
                     <button class="foto-usuario">
                             <% if(usuario) { %> 
-                                <img class="foto-usuario" src="/foto/<%= usuario.suafoto %> " alt="">
+                                <img class="foto-usuario" src="/foto/<%= usuario.suafoto || locals.usuario.foto%> " alt="">
+
                             <% }%> 
                     </button>
                 </a>
                 <% }%>
-                    <% if(usuario) { %>
+
+                    <% if(usuario || locals.usuario) { %>
+
                         <li >
                             <a id="botão-sair" href="/usuario/logout">
                                 Sair
